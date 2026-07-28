@@ -637,7 +637,189 @@ settings:
     title: Hide Frontmatter Metadata
     description: Hides the frontmatter metadata panel at the top of notes.
     type: class-toggle
+*/
+
+/* @settings
+name: "Rosé Pine Markdown Elements"
+id: rose-pine-markdown
+settings:
+  -
+    id: rp-markdown-elements-heading
+    title: Markdown Elements
+    description: Custom styles for callouts, code blocks, tables, lists, tags, and embeds
+    type: heading
+    level: 1
+    collapsed: true
+
+  # Callouts
+  -
+    id: rp-callouts-subheading
+    title: Callouts
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: rp-callout-style
+    title: Callout Style
+    type: class-select
+    default: none
+    options:
+    -
+      label: Default
+      value: none
+    -
+      label: Sleek (Border outline & tinted header)
+      value: rp-callout-sleek
+    -
+      label: Vanilla (No outer background, filled header & primary content body)
+      value: rp-callout-vanilla
+  -
+    id: callout-radius
+    title: Callout Border Radius
+    type: variable-number
+    default: 8
+    format: px
+  -
+    id: callout-title-padding
+    title: Callout Title Padding
+    type: variable-text
+    default: 8px 12px
+  -
+    id: callout-content-padding
+    title: Callout Content Padding
+    type: variable-text
+    default: 12px 16px
+
+  # Checkboxes
+  -
+    id: rp-checkboxes-subheading
+    title: Checkboxes
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: rp-custom-checkboxes
+    title: Enable Custom Checkboxes
+    description: Apply modern stylized checkboxes instead of standard system checkboxes
+    type: class-toggle
     default: false
+
+  # Codeblocks
+  -
+    id: rp-codeblocks-subheading
+    title: Codeblocks
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: rp-codeblock-edit-nowrap
+    title: Codeblock Line Wrap (Edit Mode)
+    description: Prevent line wrapping in editing views (adds horizontal scrollbar)
+    type: class-toggle
+    default: false
+  -
+    id: rp-codeblock-preview-nowrap
+    title: Codeblock Line Wrap (Preview Mode)
+    description: Prevent line wrapping in reading views (adds horizontal scrollbar)
+    type: class-toggle
+    default: false
+
+  # Embeds
+  -
+    id: rp-embeds-subheading
+    title: Embeds & Media
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: embed-corner-radius
+    title: Embed Corner Radius
+    description: Customize border-radius of images, videos, and iframe embeds
+    type: variable-number
+    default: 8
+    format: px
+
+  # Lists
+  -
+    id: rp-lists-subheading
+    title: Lists
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: list-spacing
+    title: List Vertical Spacing
+    type: variable-text
+    default: 0.1em
+  -
+    id: list-indent
+    title: List Indent Size
+    type: variable-text
+    default: 1.5em
+  -
+    id: rp-list-bullet-color-toggle
+    title: Enable Custom Bullet Color
+    type: class-toggle
+    default: false
+  -
+    id: list-bullet-color
+    title: Unordered List Bullet Color
+    type: variable-themed-color
+    default-light: '#'
+    default-dark: '#'
+    format: hex
+
+  # Tables
+  -
+    id: rp-tables-subheading
+    title: Tables
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: rp-table-zebra
+    title: Enable Alternate Row Shading
+    description: Adds a background tint to every second row for easier reading
+    type: class-toggle
+    default: false
+  -
+    id: rp-table-width
+    title: Custom Table Width
+    description: Set tables to stretch to a custom width percentage
+    type: class-toggle
+    default: false
+  -
+    id: table-width-pct
+    title: Table Width Percentage
+    type: variable-number
+    default: 100
+    format: "%"
+  -
+    id: rp-table-center
+    title: Center Tables
+    description: Automatically centers tables on the page
+    type: class-toggle
+    default: false
+
+  # Tags
+  -
+    id: rp-tags-subheading
+    title: Tags
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: tag-border-width
+    title: Tag Border Width
+    type: variable-number
+    default: 0
+    format: px
+  -
+    id: tag-radius
+    title: Tag Border Radius
+    type: variable-number
+    default: 4
+    format: px
 */
 
 .rp-accent-rose,
