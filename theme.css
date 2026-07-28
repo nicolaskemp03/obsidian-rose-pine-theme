@@ -295,8 +295,8 @@ settings:
       value: var(--rp-foam)
 */
 /* @settings
-name: "Rosé Pine Typography & Headings"
-id: rose-pine-typography
+name: "AnuPpuccin's Settings"
+id: anuppuccin-style-settings
 settings:
   -
     id: rp-typography-heading
@@ -627,11 +627,6 @@ settings:
     -
       label: Black (900)
       value: '900'
-*/
-/* @settings
-name: "Rosé Pine Show/Hide UI Elements"
-id: rose-pine-show-hide
-settings:
   -
     id: rp-show-hide-elements-heading
     title: Show/Hide UI Elements
@@ -674,11 +669,7 @@ settings:
     title: Hide Frontmatter Metadata
     description: Hides the frontmatter metadata panel at the top of notes.
     type: class-toggle
-*/
-/* @settings
-name: "Rosé Pine Markdown Elements"
-id: rose-pine-markdown
-settings:
+    default: false
   -
     id: rp-markdown-elements-heading
     title: Markdown Elements
@@ -848,11 +839,6 @@ settings:
     title: Tag Border Radius
     type: variable-number
     default: 4
-*/
-/* @settings
-name: "Rosé Pine Layout & Margins"
-id: rose-pine-layout
-settings:
   -
     id: rp-layout-margins-heading
     title: Layout & Margins
