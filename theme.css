@@ -848,6 +848,37 @@ settings:
     title: Tag Border Radius
     type: variable-number
     default: 4
+*/
+/* @settings
+name: "Rosé Pine Layout & Margins"
+id: rose-pine-layout
+settings:
+  -
+    id: rp-layout-margins-heading
+    title: Layout & Margins
+    description: Customize page widths, line widths, and page margins
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: file-line-width
+    title: Maximum Line Width (Readable Mode)
+    description: Sets the maximum width of the text content when "Readable line width" is enabled.
+    type: variable-number
+    default: 900
+    format: px
+  -
+    id: rp-toggle-preview
+    title: Enable Custom Margins
+    description: Enable custom side margins for your notes.
+    type: class-toggle
+    default: false
+  -
+    id: custom-file-margins
+    title: Note Side Margins
+    description: Side padding/margins of the note content (active only if "Enable Custom Margins" is turned on).
+    type: variable-number
+    default: 32
     format: px
 */
 .rp-accent-rose,
@@ -1280,14 +1311,14 @@ thead {
   background-color: var(--interactive-accent-hover);
 }
 .markdown-source-view.is-readable-line-width .CodeMirror {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: var(--file-line-width, 900px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .markdown-preview-view.is-readable-line-width .markdown-preview-section {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: var(--file-line-width, 900px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .view-header {
   background-color: var(--background-primary) !important;
@@ -1672,6 +1703,33 @@ body {
   --vim-cursor: var(--rp-rose);
   --border-color: var(--rp-highlightMed);
   --font-monospace: var(--font-family-code);
+}
+/* =========================================================================
+   layout-margins.css
+   Style overrides for line widths and custom margins
+   ========================================================================= */
+.markdown-source-view.is-readable-line-width .CodeMirror {
+  max-width: var(--file-line-width, 900px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.markdown-preview-view.is-readable-line-width .markdown-preview-section {
+  max-width: var(--file-line-width, 900px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.rp-toggle-preview {
+  --file-margins: var(--custom-file-margins, 32px) !important;
+}
+.rp-toggle-preview .markdown-preview-view,
+.rp-toggle-preview .mod-single-child .markdown-preview-view {
+  padding-left: var(--file-margins) !important;
+  padding-right: var(--file-margins) !important;
+}
+.style-settings-container .setting-item:is([data-id=custom-file-margins], [data-id=file-line-width]) .setting-item-control::after {
+  content: "px";
+  margin-left: 4px;
+  color: var(--text-muted);
 }
 /* =========================================================================
    markdown-elements.css
