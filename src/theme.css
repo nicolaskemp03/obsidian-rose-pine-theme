@@ -124,6 +124,7 @@ a:not(.internal-link) {
 
 .cm-strong:not(.cm-formatting-strong),
 strong {
+  font-weight: var(--bold-weight, bold) !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 0 0.1rem;
@@ -149,6 +150,7 @@ strong::selection {
 
 .cm-strong:not(.cm-formatting-strong),
 strong {
+  font-weight: var(--bold-weight, bold) !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 0 0.1rem;

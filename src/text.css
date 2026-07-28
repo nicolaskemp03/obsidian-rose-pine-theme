@@ -34,48 +34,62 @@
 
 .cm-header-1,
 .markdown-preview-view h1 {
-  font-family: var(--font-family-editor) !important;
-  font-weight: 500;
-  font-size: var(--font-size-h1);
-  color: var(--rp-h1);
+  font-family: var(--heading-font, var(--font-family-editor)) !important;
+  font-weight: var(--font-weight-h1, 500) !important;
+  font-size: var(--font-size-h1) !important;
+  color: var(--rp-h1) !important;
 }
 
 .cm-header-2,
 .markdown-preview-view h2 {
-  font-family: var(--font-family-editor) !important;
-  font-weight: 500;
-  font-size: var(--font-size-h2);
-  color: var(--rp-h2);
+  font-family: var(--heading-font, var(--font-family-editor)) !important;
+  font-weight: var(--font-weight-h2, 500) !important;
+  font-size: var(--font-size-h2) !important;
+  color: var(--rp-h2) !important;
 }
 
 .cm-header-3,
 .markdown-preview-view h3 {
-  font-family: var(--font-family-editor) !important;
-  font-weight: 500;
-  font-size: var(--font-size-h3);
-  color: var(--rp-h3);
+  font-family: var(--heading-font, var(--font-family-editor)) !important;
+  font-weight: var(--font-weight-h3, 500) !important;
+  font-size: var(--font-size-h3) !important;
+  color: var(--rp-h3) !important;
 }
 
 .cm-header-4,
 .markdown-preview-view h4 {
-  font-family: var(--font-family-editor) !important;
-  font-weight: 500;
-  font-size: var(--font-size-h4);
-  color: var(--rp-h4);
+  font-family: var(--heading-font, var(--font-family-editor)) !important;
+  font-weight: var(--font-weight-h4, 500) !important;
+  font-size: var(--font-size-h4) !important;
+  color: var(--rp-h4) !important;
 }
 
 .cm-header-5,
 .markdown-preview-view h5 {
-  font-family: var(--font-family-editor) !important;
-  font-weight: 500;
-  font-size: var(--font-size-h5);
-  color: var(--rp-h5);
+  font-family: var(--heading-font, var(--font-family-editor)) !important;
+  font-weight: var(--font-weight-h5, 500) !important;
+  font-size: var(--font-size-h5) !important;
+  color: var(--rp-h5) !important;
 }
 
 .cm-header-6,
 .markdown-preview-view h6 {
-  font-family: var(--font-family-editor) !important;
-  font-weight: 500;
-  font-size: var(--font-size-h6);
-  color: var(--rp-h6);
+  font-family: var(--heading-font, var(--font-family-editor)) !important;
+  font-weight: var(--font-weight-h6, 500) !important;
+  font-size: var(--font-size-h6) !important;
+  color: var(--rp-h6) !important;
 }
+
+/* Headers - Dividers */
+.h1-divider .markdown-preview-view h1,
+.h1-divider .cm-header-1 {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.25em;
+}
+
+.h2-divider .markdown-preview-view h2,
+.h2-divider .cm-header-2 {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.2em;
+}
+

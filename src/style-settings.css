@@ -248,30 +248,249 @@ settings:
     -
       label: Foam
       value: var(--rp-foam)
+*/
+
+/* @settings
+name: "Rosé Pine Typography & Headings"
+id: rose-pine-typography
+settings:
+  -
+    id: rp-typography-heading
+    title: Typography & Headings
+    description: Font families, weights, and heading configurations
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: rp-font-families-subheading
+    title: Font Families & Weights
+    type: heading
+    level: 2
+    collapsed: true
   -
     id: font-family-editor
-    title: Editor font
-    description: Font used for the editors modes
+    title: Editor Font
+    description: Font used for the editor modes
     type: variable-text
     default: '"Inter", "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
   -
     id: font-family-preview
-    title: Preview font
-    description: Font used for the preview modes
+    title: Preview Font
+    description: Font used for the preview/reading modes
     type: variable-text
     default: 'Georgia, "Times New Roman", serif'
   -
     id: font-family-accent
-    title: Accent font
-    description: Font used for the buttons and other accents
+    title: Accent Font
+    description: Font used for buttons and UI elements
     type: variable-text
     default: '"Inter", "Segoe UI", "Helvetica Neue", sans-serif'
   -
     id: font-family-code
-    title: Code font
-    description: Font used for the code blocks
+    title: Code Font
+    description: Font used for code blocks and inline code
     type: variable-text
     default: '"JetBrains Mono", "Fira Code", "Courier New", monospace'
+  -
+    id: heading-font
+    title: Heading Font Family
+    description: Custom font family specifically for H1-H6 headings (falls back to Editor font if empty)
+    type: variable-text
+    default: ''
+  -
+    id: bold-weight
+    title: Bold Text Weight
+    description: Font weight for bold text
+    type: variable-select
+    default: '700'
+    options:
+      - { label: 'Light', value: '300' }
+      - { label: 'Normal', value: '400' }
+      - { label: 'Medium', value: '500' }
+      - { label: 'Semibold', value: '600' }
+      - { label: 'Bold', value: '700' }
+      - { label: 'Extrabold', value: '800' }
+      - { label: 'Black', value: '900' }
+  -
+    id: rp-headings-subheading
+    title: Headings Customization
+    type: heading
+    level: 2
+    collapsed: true
+
+  # H1
+  -
+    id: rp-h1-subheading
+    title: Heading 1 (H1)
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: font-size-h1
+    title: H1 Font Size
+    type: variable-number
+    default: 26
+    format: px
+  -
+    id: font-weight-h1
+    title: H1 Font Weight
+    type: variable-select
+    default: '500'
+    options:
+      - { label: 'Light (300)', value: '300' }
+      - { label: 'Normal (400)', value: '400' }
+      - { label: 'Medium (500)', value: '500' }
+      - { label: 'Semibold (600)', value: '600' }
+      - { label: 'Bold (700)', value: '700' }
+      - { label: 'Extrabold (800)', value: '800' }
+      - { label: 'Black (900)', value: '900' }
+  -
+    id: h1-divider
+    title: Enable H1 Divider
+    description: Adds a subtle border under H1 headings
+    type: class-toggle
+    default: false
+
+  # H2
+  -
+    id: rp-h2-subheading
+    title: Heading 2 (H2)
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: font-size-h2
+    title: H2 Font Size
+    type: variable-number
+    default: 25
+    format: px
+  -
+    id: font-weight-h2
+    title: H2 Font Weight
+    type: variable-select
+    default: '500'
+    options:
+      - { label: 'Light (300)', value: '300' }
+      - { label: 'Normal (400)', value: '400' }
+      - { label: 'Medium (500)', value: '500' }
+      - { label: 'Semibold (600)', value: '600' }
+      - { label: 'Bold (700)', value: '700' }
+      - { label: 'Extrabold (800)', value: '800' }
+      - { label: 'Black (900)', value: '900' }
+  -
+    id: h2-divider
+    title: Enable H2 Divider
+    description: Adds a subtle border under H2 headings
+    type: class-toggle
+    default: false
+
+  # H3
+  -
+    id: rp-h3-subheading
+    title: Heading 3 (H3)
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: font-size-h3
+    title: H3 Font Size
+    type: variable-number
+    default: 21
+    format: px
+  -
+    id: font-weight-h3
+    title: H3 Font Weight
+    type: variable-select
+    default: '500'
+    options:
+      - { label: 'Light (300)', value: '300' }
+      - { label: 'Normal (400)', value: '400' }
+      - { label: 'Medium (500)', value: '500' }
+      - { label: 'Semibold (600)', value: '600' }
+      - { label: 'Bold (700)', value: '700' }
+      - { label: 'Extrabold (800)', value: '800' }
+      - { label: 'Black (900)', value: '900' }
+
+  # H4
+  -
+    id: rp-h4-subheading
+    title: Heading 4 (H4)
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: font-size-h4
+    title: H4 Font Size
+    type: variable-number
+    default: 20
+    format: px
+  -
+    id: font-weight-h4
+    title: H4 Font Weight
+    type: variable-select
+    default: '500'
+    options:
+      - { label: 'Light (300)', value: '300' }
+      - { label: 'Normal (400)', value: '400' }
+      - { label: 'Medium (500)', value: '500' }
+      - { label: 'Semibold (600)', value: '600' }
+      - { label: 'Bold (700)', value: '700' }
+      - { label: 'Extrabold (800)', value: '800' }
+      - { label: 'Black (900)', value: '900' }
+
+  # H5
+  -
+    id: rp-h5-subheading
+    title: Heading 5 (H5)
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: font-size-h5
+    title: H5 Font Size
+    type: variable-number
+    default: 19
+    format: px
+  -
+    id: font-weight-h5
+    title: H5 Font Weight
+    type: variable-select
+    default: '500'
+    options:
+      - { label: 'Light (300)', value: '300' }
+      - { label: 'Normal (400)', value: '400' }
+      - { label: 'Medium (500)', value: '500' }
+      - { label: 'Semibold (600)', value: '600' }
+      - { label: 'Bold (700)', value: '700' }
+      - { label: 'Extrabold (800)', value: '800' }
+      - { label: 'Black (900)', value: '900' }
+
+  # H6
+  -
+    id: rp-h6-subheading
+    title: Heading 6 (H6)
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: font-size-h6
+    title: H6 Font Size
+    type: variable-number
+    default: 18
+    format: px
+  -
+    id: font-weight-h6
+    title: H6 Font Weight
+    type: variable-select
+    default: '500'
+    options:
+      - { label: 'Light (300)', value: '300' }
+      - { label: 'Normal (400)', value: '400' }
+      - { label: 'Medium (500)', value: '500' }
+      - { label: 'Semibold (600)', value: '600' }
+      - { label: 'Bold (700)', value: '700' }
+      - { label: 'Extrabold (800)', value: '800' }
+      - { label: 'Black (900)', value: '900' }
 */
 
 .rp-accent-rose,
