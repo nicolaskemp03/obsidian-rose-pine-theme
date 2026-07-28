@@ -348,13 +348,27 @@ settings:
     type: variable-select
     default: '700'
     options:
-      - { label: 'Light', value: '300' }
-      - { label: 'Normal', value: '400' }
-      - { label: 'Medium', value: '500' }
-      - { label: 'Semibold', value: '600' }
-      - { label: 'Bold', value: '700' }
-      - { label: 'Extrabold', value: '800' }
-      - { label: 'Black', value: '900' }
+    -
+      label: Light
+      value: '300'
+    -
+      label: Normal
+      value: '400'
+    -
+      label: Medium
+      value: '500'
+    -
+      label: Semibold
+      value: '600'
+    -
+      label: Bold
+      value: '700'
+    -
+      label: Extrabold
+      value: '800'
+    -
+      label: Black
+      value: '900'
   -
     id: rp-headings-subheading
     title: Headings Customization
@@ -380,13 +394,27 @@ settings:
     type: variable-select
     default: '500'
     options:
-      - { label: 'Light (300)', value: '300' }
-      - { label: 'Normal (400)', value: '400' }
-      - { label: 'Medium (500)', value: '500' }
-      - { label: 'Semibold (600)', value: '600' }
-      - { label: 'Bold (700)', value: '700' }
-      - { label: 'Extrabold (800)', value: '800' }
-      - { label: 'Black (900)', value: '900' }
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
   -
     id: h1-divider
     title: Enable H1 Divider
@@ -412,13 +440,27 @@ settings:
     type: variable-select
     default: '500'
     options:
-      - { label: 'Light (300)', value: '300' }
-      - { label: 'Normal (400)', value: '400' }
-      - { label: 'Medium (500)', value: '500' }
-      - { label: 'Semibold (600)', value: '600' }
-      - { label: 'Bold (700)', value: '700' }
-      - { label: 'Extrabold (800)', value: '800' }
-      - { label: 'Black (900)', value: '900' }
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
   -
     id: h2-divider
     title: Enable H2 Divider
@@ -444,13 +486,27 @@ settings:
     type: variable-select
     default: '500'
     options:
-      - { label: 'Light (300)', value: '300' }
-      - { label: 'Normal (400)', value: '400' }
-      - { label: 'Medium (500)', value: '500' }
-      - { label: 'Semibold (600)', value: '600' }
-      - { label: 'Bold (700)', value: '700' }
-      - { label: 'Extrabold (800)', value: '800' }
-      - { label: 'Black (900)', value: '900' }
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
   # H4
   -
     id: rp-h4-subheading
@@ -470,13 +526,27 @@ settings:
     type: variable-select
     default: '500'
     options:
-      - { label: 'Light (300)', value: '300' }
-      - { label: 'Normal (400)', value: '400' }
-      - { label: 'Medium (500)', value: '500' }
-      - { label: 'Semibold (600)', value: '600' }
-      - { label: 'Bold (700)', value: '700' }
-      - { label: 'Extrabold (800)', value: '800' }
-      - { label: 'Black (900)', value: '900' }
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
   # H5
   -
     id: rp-h5-subheading
@@ -496,13 +566,27 @@ settings:
     type: variable-select
     default: '500'
     options:
-      - { label: 'Light (300)', value: '300' }
-      - { label: 'Normal (400)', value: '400' }
-      - { label: 'Medium (500)', value: '500' }
-      - { label: 'Semibold (600)', value: '600' }
-      - { label: 'Bold (700)', value: '700' }
-      - { label: 'Extrabold (800)', value: '800' }
-      - { label: 'Black (900)', value: '900' }
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
   # H6
   -
     id: rp-h6-subheading
@@ -522,13 +606,75 @@ settings:
     type: variable-select
     default: '500'
     options:
-      - { label: 'Light (300)', value: '300' }
-      - { label: 'Normal (400)', value: '400' }
-      - { label: 'Medium (500)', value: '500' }
-      - { label: 'Semibold (600)', value: '600' }
-      - { label: 'Bold (700)', value: '700' }
-      - { label: 'Extrabold (800)', value: '800' }
-      - { label: 'Black (900)', value: '900' }
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
+*/
+/* @settings
+name: "Rosé Pine Show/Hide UI Elements"
+id: rose-pine-show-hide
+settings:
+  -
+    id: rp-show-hide-elements-heading
+    title: Show/Hide UI Elements
+    description: Toggle visibility of various UI components
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: rp-autohide-titlebar
+    title: Autohide View Header (Pane Title Bar)
+    description: Hides the header containing the note title at the top of each pane and reveals it on hover.
+    type: class-toggle
+    default: false
+  -
+    id: rp-toggle-scrollbars
+    title: Hide Scrollbars
+    description: Completely hides scrollbars across the application.
+    type: class-toggle
+    default: false
+  -
+    id: rp-hide-status-bar
+    title: Hide Status Bar
+    description: Hides the status bar at the bottom of the window.
+    type: class-toggle
+    default: false
+  -
+    id: rp-tooltip-toggle
+    title: Hide Tooltips
+    description: Prevents tooltips from appearing when hovering over icons.
+    type: class-toggle
+    default: false
+  -
+    id: rp-hide-external-link-icon
+    title: Hide External Link Icon
+    description: Hides the small arrow icon next to external links.
+    type: class-toggle
+    default: false
+  -
+    id: rp-toggle-metadata
+    title: Hide Frontmatter Metadata
+    description: Hides the frontmatter metadata panel at the top of notes.
+    type: class-toggle
+    default: false
 */
 .rp-accent-rose,
 .rp-accent-full {
@@ -1190,7 +1336,67 @@ hr {
 }
 body {
   background: var(--rp-base);
-  color: var(var(--rp-text));
+  color: var(--rp-text);
+}
+.rp-toggle-scrollbars *::-webkit-scrollbar {
+  display: none !important;
+}
+.rp-hide-status-bar .status-bar {
+  display: none !important;
+}
+.rp-tooltip-toggle .tooltip {
+  display: none !important;
+}
+.rp-hide-external-link-icon .external-link-icon,
+.rp-hide-external-link-icon .external-link::after {
+  display: none !important;
+}
+.rp-hide-external-link-icon .external-link {
+  background-image: none !important;
+  padding-right: 0px !important;
+}
+.rp-toggle-metadata .frontmatter-container,
+.rp-toggle-metadata .metadata-container {
+  display: none !important;
+}
+.rp-autohide-titlebar:not(.is-mobile) {
+  --title-bar-delay: 150ms;
+  --title-bar-duration: 300ms;
+  --title-bar-target-translate-y: 18px;
+  --title-bar-translate-y: 40px;
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header {
+  margin-top: calc(var(--title-bar-translate-y) * -1);
+  position: relative;
+  transition: transform var(--title-bar-duration) var(--title-bar-delay);
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header::before {
+  bottom: calc(var(--title-bar-target-translate-y) * -1);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: transform var(--title-bar-duration) var(--title-bar-delay);
+  width: 100%;
+  z-index: 0;
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within)::before {
+  transform: translateY(var(--title-bar-target-translate-y));
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within),
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within) + .view-content {
+  transform: translateY(var(--title-bar-translate-y));
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-content {
+  transition: transform var(--title-bar-duration) var(--title-bar-delay);
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header > div {
+  transition: visibility var(--title-bar-duration) var(--title-bar-delay);
+  visibility: visible;
+  z-index: 1;
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:not(:hover, :focus-within) > div {
+  visibility: hidden;
 }
 .theme-light,
 .theme-light.rose-dawn {

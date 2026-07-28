@@ -304,13 +304,27 @@ settings:
     type: variable-select
     default: '700'
     options:
-      - { label: 'Light', value: '300' }
-      - { label: 'Normal', value: '400' }
-      - { label: 'Medium', value: '500' }
-      - { label: 'Semibold', value: '600' }
-      - { label: 'Bold', value: '700' }
-      - { label: 'Extrabold', value: '800' }
-      - { label: 'Black', value: '900' }
+    -
+      label: Light
+      value: '300'
+    -
+      label: Normal
+      value: '400'
+    -
+      label: Medium
+      value: '500'
+    -
+      label: Semibold
+      value: '600'
+    -
+      label: Bold
+      value: '700'
+    -
+      label: Extrabold
+      value: '800'
+    -
+      label: Black
+      value: '900'
   -
     id: rp-headings-subheading
     title: Headings Customization
@@ -337,13 +351,27 @@ settings:
     type: variable-select
     default: '500'
     options:
-      - { label: 'Light (300)', value: '300' }
-      - { label: 'Normal (400)', value: '400' }
-      - { label: 'Medium (500)', value: '500' }
-      - { label: 'Semibold (600)', value: '600' }
-      - { label: 'Bold (700)', value: '700' }
-      - { label: 'Extrabold (800)', value: '800' }
-      - { label: 'Black (900)', value: '900' }
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
   -
     id: h1-divider
     title: Enable H1 Divider
@@ -370,13 +398,27 @@ settings:
     type: variable-select
     default: '500'
     options:
-      - { label: 'Light (300)', value: '300' }
-      - { label: 'Normal (400)', value: '400' }
-      - { label: 'Medium (500)', value: '500' }
-      - { label: 'Semibold (600)', value: '600' }
-      - { label: 'Bold (700)', value: '700' }
-      - { label: 'Extrabold (800)', value: '800' }
-      - { label: 'Black (900)', value: '900' }
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
   -
     id: h2-divider
     title: Enable H2 Divider
@@ -403,13 +445,27 @@ settings:
     type: variable-select
     default: '500'
     options:
-      - { label: 'Light (300)', value: '300' }
-      - { label: 'Normal (400)', value: '400' }
-      - { label: 'Medium (500)', value: '500' }
-      - { label: 'Semibold (600)', value: '600' }
-      - { label: 'Bold (700)', value: '700' }
-      - { label: 'Extrabold (800)', value: '800' }
-      - { label: 'Black (900)', value: '900' }
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
 
   # H4
   -
@@ -430,13 +486,27 @@ settings:
     type: variable-select
     default: '500'
     options:
-      - { label: 'Light (300)', value: '300' }
-      - { label: 'Normal (400)', value: '400' }
-      - { label: 'Medium (500)', value: '500' }
-      - { label: 'Semibold (600)', value: '600' }
-      - { label: 'Bold (700)', value: '700' }
-      - { label: 'Extrabold (800)', value: '800' }
-      - { label: 'Black (900)', value: '900' }
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
 
   # H5
   -
@@ -457,13 +527,27 @@ settings:
     type: variable-select
     default: '500'
     options:
-      - { label: 'Light (300)', value: '300' }
-      - { label: 'Normal (400)', value: '400' }
-      - { label: 'Medium (500)', value: '500' }
-      - { label: 'Semibold (600)', value: '600' }
-      - { label: 'Bold (700)', value: '700' }
-      - { label: 'Extrabold (800)', value: '800' }
-      - { label: 'Black (900)', value: '900' }
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
 
   # H6
   -
@@ -484,13 +568,76 @@ settings:
     type: variable-select
     default: '500'
     options:
-      - { label: 'Light (300)', value: '300' }
-      - { label: 'Normal (400)', value: '400' }
-      - { label: 'Medium (500)', value: '500' }
-      - { label: 'Semibold (600)', value: '600' }
-      - { label: 'Bold (700)', value: '700' }
-      - { label: 'Extrabold (800)', value: '800' }
-      - { label: 'Black (900)', value: '900' }
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
+*/
+
+/* @settings
+name: "Rosé Pine Show/Hide UI Elements"
+id: rose-pine-show-hide
+settings:
+  -
+    id: rp-show-hide-elements-heading
+    title: Show/Hide UI Elements
+    description: Toggle visibility of various UI components
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: rp-autohide-titlebar
+    title: Autohide View Header (Pane Title Bar)
+    description: Hides the header containing the note title at the top of each pane and reveals it on hover.
+    type: class-toggle
+    default: false
+  -
+    id: rp-toggle-scrollbars
+    title: Hide Scrollbars
+    description: Completely hides scrollbars across the application.
+    type: class-toggle
+    default: false
+  -
+    id: rp-hide-status-bar
+    title: Hide Status Bar
+    description: Hides the status bar at the bottom of the window.
+    type: class-toggle
+    default: false
+  -
+    id: rp-tooltip-toggle
+    title: Hide Tooltips
+    description: Prevents tooltips from appearing when hovering over icons.
+    type: class-toggle
+    default: false
+  -
+    id: rp-hide-external-link-icon
+    title: Hide External Link Icon
+    description: Hides the small arrow icon next to external links.
+    type: class-toggle
+    default: false
+  -
+    id: rp-toggle-metadata
+    title: Hide Frontmatter Metadata
+    description: Hides the frontmatter metadata panel at the top of notes.
+    type: class-toggle
+    default: false
 */
 
 .rp-accent-rose,

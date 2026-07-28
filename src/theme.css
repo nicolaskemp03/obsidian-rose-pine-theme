@@ -667,8 +667,89 @@ hr {
   );
   clear: both;
 }
-
 body {
   background: var(--rp-base);
-  color: var(var(--rp-text));
+  color: var(--rp-text);
 }
+
+/* Show/Hide UI Elements toggles */
+
+/* Hide Scrollbars */
+.rp-toggle-scrollbars *::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Hide Status Bar */
+.rp-hide-status-bar .status-bar {
+  display: none !important;
+}
+
+/* Hide Tooltips */
+.rp-tooltip-toggle .tooltip {
+  display: none !important;
+}
+
+/* Hide External Link Icons */
+.rp-hide-external-link-icon .external-link-icon,
+.rp-hide-external-link-icon .external-link::after {
+  display: none !important;
+}
+.rp-hide-external-link-icon .external-link {
+  background-image: none !important;
+  padding-right: 0px !important;
+}
+
+/* Hide Metadata Frontmatter */
+.rp-toggle-metadata .frontmatter-container,
+.rp-toggle-metadata .metadata-container {
+  display: none !important;
+}
+
+/* Autohide View Header (Pane Title Bar) */
+.rp-autohide-titlebar:not(.is-mobile) {
+  --title-bar-delay: 150ms;
+  --title-bar-duration: 300ms;
+  --title-bar-target-translate-y: 18px;
+  --title-bar-translate-y: 40px;
+}
+
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header {
+  margin-top: calc(var(--title-bar-translate-y) * -1);
+  position: relative;
+  transition: transform var(--title-bar-duration) var(--title-bar-delay);
+}
+
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header::before {
+  bottom: calc(var(--title-bar-target-translate-y) * -1);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: transform var(--title-bar-duration) var(--title-bar-delay);
+  width: 100%;
+  z-index: 0;
+}
+
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within)::before {
+  transform: translateY(var(--title-bar-target-translate-y));
+}
+
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within),
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within) + .view-content {
+  transform: translateY(var(--title-bar-translate-y));
+}
+
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-content {
+  transition: transform var(--title-bar-duration) var(--title-bar-delay);
+}
+
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header > div {
+  transition: visibility var(--title-bar-duration) var(--title-bar-delay);
+  visibility: visible;
+  z-index: 1;
+}
+
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:not(:hover, :focus-within) > div {
+  visibility: hidden;
+}
+
