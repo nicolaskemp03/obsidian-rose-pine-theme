@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --font-size-normal: 18px;
   --font-size-code: 15px;
@@ -156,4 +157,3042 @@ img:hover {
 
 .community-theme img:hover {
   transform: none;
+}
+
+.body {
+  --blockquote-background-color: var(--code-background);
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  background-color: var(--code-background);
+  border: 0px solid;
+  border-color: var(--blockquote-border) !important;
+  border-left-width: 4px !important;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.5em;
+  margin: 30px 0px;
+  font-style: italic;
+}
+
+.markdown-preview-view blockquote {
+  background-color: var(--code-background);
+  border: 0px solid;
+  border-color: var(--blockquote-border) !important;
+  border-left-width: 4px !important;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.5em;
+  margin: 30px 0px;
+  font-style: italic;
+}
+
+.markdown-preview-view code {
+  font-size: var(--font-size-code);
+}
+
+.cm-header-1,
+.markdown-preview-view h1 {
+  font-family: var(--heading-font, var(--font-family-editor)) !important;
+  font-weight: var(--font-weight-h1, 500) !important;
+  font-size: var(--font-size-h1) !important;
+  color: var(--rp-h1) !important;
+}
+
+.cm-header-2,
+.markdown-preview-view h2 {
+  font-family: var(--heading-font, var(--font-family-editor)) !important;
+  font-weight: var(--font-weight-h2, 500) !important;
+  font-size: var(--font-size-h2) !important;
+  color: var(--rp-h2) !important;
+}
+
+.cm-header-3,
+.markdown-preview-view h3 {
+  font-family: var(--heading-font, var(--font-family-editor)) !important;
+  font-weight: var(--font-weight-h3, 500) !important;
+  font-size: var(--font-size-h3) !important;
+  color: var(--rp-h3) !important;
+}
+
+.cm-header-4,
+.markdown-preview-view h4 {
+  font-family: var(--heading-font, var(--font-family-editor)) !important;
+  font-weight: var(--font-weight-h4, 500) !important;
+  font-size: var(--font-size-h4) !important;
+  color: var(--rp-h4) !important;
+}
+
+.cm-header-5,
+.markdown-preview-view h5 {
+  font-family: var(--heading-font, var(--font-family-editor)) !important;
+  font-weight: var(--font-weight-h5, 500) !important;
+  font-size: var(--font-size-h5) !important;
+  color: var(--rp-h5) !important;
+}
+
+.cm-header-6,
+.markdown-preview-view h6 {
+  font-family: var(--heading-font, var(--font-family-editor)) !important;
+  font-weight: var(--font-weight-h6, 500) !important;
+  font-size: var(--font-size-h6) !important;
+  color: var(--rp-h6) !important;
+}
+
+.h1-divider .markdown-preview-view h1,
+.h1-divider .cm-header-1 {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.25em;
+}
+
+.h2-divider .markdown-preview-view h2,
+.h2-divider .cm-header-2 {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.2em;
+}
+
+.cm-underline {
+  color: var(--rp-accent);
+  text-decoration-color: var(--rp-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+s,
+.cm-strikethrough {
+  color: var(--text-muted);
+}
+
+.cm-em,
+em {
+  color: var(--rp-iris) !important;
+  font-family: var(--font-family-accent) !important;
+}
+
+.cm-em.cm-formatting-em {
+  display: inline-flex;
+  width: 0.45rem;
+  font-size: 0.6rem;
+  vertical-align: text-top;
+}
+
+button {
+  font-family: var(--font-family-accent);
+  font-style: italic;
+  background-color: var(--rp-overlay);
+  color: var(--rp-foam);
+}
+
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  width: 1px !important;
+  background-color: var(--border-color);
+}
+
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+  height: 1px !important;
+  background-color: var(--border-color);
+}
+
+.workspace-ribbon.is-collapsed {
+  background-color: var(--background-primary-alt);
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+  border-right: 1px solid var(--border-color);
+}
+
+.workspace-ribbon.mod-right.is-collapsed {
+  border-left: 1px solid var(--border-color);
+}
+
+.workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content,
+.workspace-split.mod-vertical > .workspace-split,
+.workspace-split.mod-vertical > .workspace-leaf,
+.workspace-tabs {
+  padding-right: 0px;
+}
+
+.status-bar {
+  font-size: var(--font-size-status-bar);
+  background-color: var(--background-secondary-alt);
+  border-top: 0px;
+}
+
+.document-search-container {
+  border-top: 0px;
+  border-right: 0px;
+  z-index: inherit;
+}
+
+a.tag:hover {
+  color: var(--text-accent) !important;
+}
+
+.cm-hashtag,
+a.tag {
+  color: var(--text-accent-hover) !important;
+  font-style: normal !important;
+}
+
+.cm-s-obsidian span.cm-string {
+  color: var(--text-accent-hover) !important;
+}
+
+a:not(.internal-link) {
+  font-style: italic;
+}
+
+.cm-s-obsidian pre.HyperMD-footnote span.cm-hmd-footnote,
+.cm-s-obsidian span.cm-footref {
+  color: var(--text-accent) !important;
+}
+
+.cm-fat-cursor {
+  background-color: var(--text-selection) !important;
+  color: var(--rp-accent) !important;
+  opacity: 0.5 !important;
+}
+
+.cm-animate-fat-cursor {
+  background-color: var(--text-selection) !important;
+  color: var(--rp-accent) !important;
+  opacity: 0.5 !important;
+}
+
+.app-container {
+  font-family: var(--font-family-accent) !important;
+}
+
+::selection {
+  background-color: var(--text-selection);
+}
+
+.cm-s-obsidian,
+.mod-single-child .cm-s-obsidian {
+  font-family: var(--font-family-editor) !important;
+  font-size: var(--font-size-normal);
+}
+
+.markdown-preview-view,
+.mod-single-child .markdown-preview-view {
+  font-family: var(--font-family-preview) !important;
+  font-size: var(--font-size-normal);
+  padding-top: 0px;
+  padding-left: 2% !important;
+  padding-right: 1% !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-scroller {
+  font-family: var(--font-family-editor) !important;
+  font-size: var(--font-size-normal);
+}
+
+.cm-strong:not(.cm-formatting-strong),
+strong {
+  font-weight: var(--bold-weight, bold) !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0 0.1rem;
+  color: var(--rp-love);
+  background-color: var(--rp-love);
+  background-image: linear-gradient(62deg, var(--rp-love) 0%, var(--rp-iris) 100%) !important;
+}
+
+strong .math.math-inline .MathJax {
+  position: inherit !important;
+}
+
+.cm-strong::selection,
+strong::selection {
+  -webkit-text-fill-color: var(--rp-love);
+}
+
+.cm-formatting.cm-formatting-strong.cm-strong,
+.cm-formatting.cm-formatting-em.cm-em {
+  color: var(--text-faint) !important;
+  opacity: 0.25;
+}
+
+.cm-strong kbd,
+strong kbd {
+  -webkit-text-fill-color: initial;
+}
+
+.cm-strong span.cm-inline-code,
+strong code {
+  -webkit-text-fill-color: var(--rp-love) !important;
+  color: var(--rp-love) !important;
+  font-weight: bold !important;
+}
+
+.cm-strong span.cm-inline-code::selection,
+strong code::selection {
+  -webkit-text-fill-color: inherit !important;
+}
+
+.cm-s-obsidian span.cm-formatting-list {
+  color: var(--text-normal) !important;
+}
+
+.markdown-preview-view hr {
+  border-top: none !important;
+  border-color: none !important;
+}
+
+pre code {
+  font-family: var(--font-family-code) !important;
+  font-size: 14 !important;
+  padding: 6px !important;
+  line-height: normal;
+  display: block;
+  color: var(--code-block) !important;
+}
+
+.markdown-preview-view pre {
+  padding: 0px !important;
+}
+
+.theme-dark code[class*=language-],
+.theme-dark pre[class*=language-],
+.theme-light code[class*=language-],
+.theme-light pre[class*=language-] {
+  text-shadow: none !important;
+  color: var(--text-faint) !important;
+  background-color: var(--code-background);
+}
+
+.cm-s-obsidian span.cm-formatting-link {
+  color: var(--text-accent) !important;
+}
+
+.cm-quote {
+  color: var(--text-normal) !important;
+  font-style: italic;
+}
+
+th {
+  font-weight: 800 !important;
+}
+
+.markdown-preview-view th {
+  font-weight: 800;
+  background-color: var(--background-secondary) !important;
+}
+
+thead {
+  border-bottom: 3px solid var(--background-modifier-border);
+}
+
+.modal {
+  border: none;
+}
+
+.table {
+  padding: 4px;
+  line-height: normal;
+  display: block;
+  border-radius: 4px;
+}
+
+.markdown-preview-view .task-list-item-checkbox {
+  -webkit-appearance: none;
+  top: 0.2em !important;
+  right: 4px;
+  box-sizing: border-box;
+  border: 1px solid var(--text-muted);
+  position: relative;
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0;
+  box-shadow: 0 0 0.1em var(--text-muted);
+}
+.markdown-preview-view .task-list-item-checkbox:checked::before {
+  content: "✓";
+  position: absolute;
+  color: var(--text-accent);
+  font-size: 1em;
+  line-height: 1.25em;
+  width: 1.2em;
+  text-align: center;
+  text-shadow: 0 0 0.1em var(--text-accent);
+}
+
+.checkbox-container {
+  background-color: var(--background-primary);
+}
+.checkbox-container.is-enabled {
+  background-color: var(--rp-accent);
+}
+
+.popover {
+  border: 1px solid var(--border-color);
+  background-color: var(--background-secondary);
+}
+
+.search-result-file-title {
+  font-size: 15px;
+}
+
+.search-result-file-matches,
+.search-empty-state {
+  font-size: var(--font-size-side-dock);
+}
+
+.search-result-file-title,
+.search-result-file-match {
+  padding: 0px 10px;
+}
+
+.nav-file-title,
+.nav-folder-title {
+  border-radius: 0 !important;
+}
+
+.workspace-leaf-content[data-type=backlink] .view-content {
+  background-color: var(--background-secondary);
+}
+
+.workspace-leaf-content[data-type=tag] .tag-pane-tag-count,
+.workspace-leaf-content[data-type=tag] .tag-pane-tag-text {
+  font-size: var(--font-size-side-dock);
+}
+
+.workspace-leaf-content[data-type=backlink] .search-result-file-matches {
+  font-size: var(--font-size-side-dock);
+}
+
+.markdown-embed-title {
+  display: none;
+}
+
+.markdown-preview-view .markdown-embed-content > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-view .markdown-embed-content > :last-child {
+  margin-bottom: 0;
+}
+.markdown-preview-view .markdown-embed {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.markdown-preview-view .markdown-embed-content {
+  max-height: unset;
+  background-color: var(--background-secondary);
+}
+
+.markdown-embed-link {
+  color: var(--text-faint) !important;
+}
+.markdown-embed-link:hover {
+  color: var(--text-accent) !important;
+}
+
+.graph-view.color-circle, .graph-view.color-fill-highlight, .graph-view.color-line-highlight {
+  color: var(--text-accent) !important;
+}
+.graph-view.color-text {
+  color: var(--text-normal) !important;
+}
+.graph-view.color-line {
+  color: var(--rp-highlightHigh);
+}
+.graph-view.color-fill {
+  color: var(--rp-iris) !important;
+}
+.graph-view.color-arrow {
+  color: var(--rp-pine);
+}
+.graph-view.color-fill-tag {
+  color: var(--rp-foam) !important;
+}
+.graph-view.color-fill-attachment {
+  color: var(--rp-gold) !important;
+}
+.graph-view.color-fill-unresolved {
+  color: var(--rp-rose) !important;
+}
+
+.workspace-leaf-content[data-type=graph] .view-content {
+  background-color: var(--background-primary);
+}
+
+.modal.mod-settings button:not(.mod-cta):hover {
+  background-color: var(--interactive-accent-hover);
+}
+
+.markdown-source-view.is-readable-line-width .CodeMirror {
+  max-width: var(--file-line-width, 900px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-section {
+  max-width: var(--file-line-width, 900px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.view-header {
+  background-color: var(--background-primary) !important;
+  border-top: 1px solid var(--border-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.day.svelte-q3wqg9:active,
+.active.svelte-q3wqg9,
+.active.today.svelte-q3wqg9 {
+  background-color: var(--rp-highlightHigh);
+  color: var(--rp-foam);
+}
+
+.view-header-title-container:after {
+  background: linear-gradient(to bottom, transparent, var(--background-primary)) !important;
+}
+
+.workspace-leaf.mod-active .view-header {
+  background-color: var(--background-primary) !important;
+  border-top: 0px !important;
+  border-bottom: 3px solid var(--interactive-accent) !important;
+}
+.workspace-leaf.mod-active .view-header-title-container:after {
+  background: linear-gradient(to bottom, transparent, var(--background-secondary-alt)) !important;
+}
+.workspace-leaf.mod-active .view-header-title,
+.workspace-leaf.mod-active .view-header-icon {
+  color: var(--background-modifier-border);
+}
+
+.view-header-title,
+.view-header-icon,
+.view-action {
+  color: var(--text-faint);
+}
+
+ul ul {
+  position: relative;
+}
+ul ul::before {
+  content: "";
+  border-left: 1px solid var(--border-color);
+  position: absolute;
+  left: -1em;
+  top: 0;
+  bottom: 0;
+}
+
+ul .task-list-item ul::before {
+  left: 0.15em !important;
+}
+
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code,
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code) {
+  background-color: var(--code-background);
+  color: var(--inline-code) !important;
+  bottom: 0px !important;
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock {
+  font-family: var(--font-family-code) !important;
+  font-size: var(--font-size-code) !important;
+  padding: 1px !important;
+  display: block;
+  color: var(--code-block) !important;
+  font-weight: 500;
+  text-indent: 0px !important;
+}
+
+.HyperMD-codeblock-bg {
+  border: 0px !important;
+}
+
+.cm-fat-cursor .CodeMirror-activeline .CodeMirror-linebackground {
+  background-color: var(--text-selection) !important;
+}
+
+code {
+  color: var(--inline-code) !important;
+  bottom: 0px !important;
+}
+
+.search-result-collapse-indicator {
+  position: absolute;
+  left: 0;
+  top: -3px;
+  color: var(--text-faint);
+  transition: transform 100ms ease-in-out;
+  padding: 0px !important;
+}
+
+em,
+.cm-em {
+  font-family: var(--font-family-accent);
+  font-style: italic;
+  color: var(--text-accent);
+}
+
+.cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-hmd-internal-link {
+  color: var(--text-normal);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 5px 5px;
+}
+
+.cm-s-obsidian span.cm-formatting-link {
+  color: var(--rp-love) !important;
+  opacity: 0.25;
+}
+
+.external-link {
+  padding: 0;
+  -webkit-text-fill-color: var(--rp-pine);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 5px 5px;
+  transition: all 350ms ease;
+  background-image: linear-gradient(to bottom, var(--bg-sub-accent-55) 0%, var(--bg-sub-accent-55) 100%);
+}
+.external-link:hover {
+  -webkit-text-fill-color: var(--text-sub-accent);
+  background-size: 4px 50px;
+}
+
+.internal-link {
+  -webkit-text-fill-color: var(--rp-foam);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 5px 5px;
+  transition: all 350ms ease;
+  background-image: linear-gradient(to bottom, var(--bg-accent-55) 0%, var(--bg-accent-55) 100%);
+}
+.internal-link:hover {
+  -webkit-text-fill-color: var(--text-accent);
+  background-size: 4px 50px;
+}
+
+a,
+.internal-link,
+.cm-hmd-internal-link,
+.cm-link {
+  color: var(--text-sub-accent);
+}
+
+.cm-url {
+  color: var(--text-faint) !important;
+  opacity: 0.4;
+  font-weight: normal;
+}
+
+.cm-formatting-image {
+  color: var(--text-accent) !important;
+  opacity: 0.7;
+}
+
+a:hover,
+.internal-link:hover {
+  color: var(--text-accent);
+}
+
+.cm-formatting-list {
+  color: var(--list) !important;
+}
+
+.cm-formatting-quote {
+  color: var(--quote-opening-modifier) !important;
+}
+
+input[type=checkbox],
+.markdown-preview-view .cm-formatting-task {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid var(--text-faint);
+  padding: 0;
+  vertical-align: middle;
+}
+
+.markdown-preview-view .cm-s-obsidian span.cm-formatting-task {
+  width: 1em !important;
+  height: 1em;
+  display: inline-block;
+}
+
+input[type=checkbox]:focus {
+  outline: 0;
+}
+
+input[type=checkbox]:checked,
+.cm-formatting-task.cm-property {
+  background-color: var(--text-accent-hover);
+  border: 1px solid var(--text-accent-hover);
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
+}
+
+hr {
+  border: 0;
+  height: 0.35rem;
+  margin: 3em auto;
+  display: block;
+  background-image: -webkit-linear-gradient(0deg, transparent, var(--rp-gold), var(--rp-love), var(--rp-rose), var(--rp-iris), var(--rp-foam), transparent);
+  clear: both;
+}
+
+body {
+  background: var(--rp-base);
+  color: var(--rp-text);
+}
+
+.rp-toggle-scrollbars *::-webkit-scrollbar {
+  display: none !important;
+}
+
+.rp-hide-status-bar .status-bar {
+  display: none !important;
+}
+
+.rp-tooltip-toggle .tooltip {
+  display: none !important;
+}
+
+.rp-hide-external-link-icon .external-link-icon,
+.rp-hide-external-link-icon .external-link::after {
+  display: none !important;
+}
+.rp-hide-external-link-icon .external-link {
+  background-image: none !important;
+  padding-right: 0px !important;
+}
+
+.rp-toggle-metadata .frontmatter-container,
+.rp-toggle-metadata .metadata-container {
+  display: none !important;
+}
+
+.rp-autohide-titlebar:not(.is-mobile) {
+  --title-bar-delay: 150ms;
+  --title-bar-duration: 300ms;
+  --title-bar-target-translate-y: 18px;
+  --title-bar-translate-y: 40px;
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header {
+  margin-top: calc(var(--title-bar-translate-y) * -1);
+  position: relative;
+  transition: transform var(--title-bar-duration) var(--title-bar-delay);
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header::before {
+  bottom: calc(var(--title-bar-target-translate-y) * -1);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: transform var(--title-bar-duration) var(--title-bar-delay);
+  width: 100%;
+  z-index: 0;
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within)::before {
+  transform: translateY(var(--title-bar-target-translate-y));
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within), .rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within) + .view-content {
+  transform: translateY(var(--title-bar-translate-y));
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header > div {
+  transition: visibility var(--title-bar-duration) var(--title-bar-delay);
+  visibility: visible;
+  z-index: 1;
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:not(:hover, :focus-within) > div {
+  visibility: hidden;
+}
+.rp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-content {
+  transition: transform var(--title-bar-duration) var(--title-bar-delay);
+}
+
+/* @settings
+name: Rosé Pine Settings
+id: rose-pine-settings
+settings:
+  -
+    id: rp-core-theme-heading
+    title: Core Theme Settings
+    description: Select base variants and accent colors
+    type: heading
+    level: 1
+    collapsed: false
+  -
+    id: rosé-pine-theme
+    title: Theme variants
+    description: Select your preferred theme, Rosé Pine Moon is enabled by setting light mode on
+    type: class-select
+    allowEmpty: false
+    default: rose-norm
+    options:
+      -
+        label: 'Rosé Pine'
+        value: rose-norm
+      -
+        label: 'Rosé Pine Moon'
+        value: rose-moon
+  -
+    id: rosé-pine-theme-accents
+    title: Theme accent
+    description: Select your preferred accent
+    type: class-select
+    allowEmpty: false
+    default: rp-accent-full
+    options:
+      -
+        label: Full palette
+        value: rp-accent-full
+      -
+        label: Love
+        value: rp-accent-love
+      -
+        label: Rose
+        value: rp-accent-rose
+      -
+        label: Gold
+        value: rp-accent-gold
+      -
+        label: Iris
+        value: rp-accent-iris
+      -
+        label: Pine
+        value: rp-accent-pine
+      -
+        label: Foam
+        value: rp-accent-foam
+  -
+    id: rp-header-colors-heading
+    title: Header Colors
+    description: Customize the colors for each heading level
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: rp-h1
+    title: H1 colour
+    description: Select your H1 colour
+    type: variable-select
+    allowEmpty: false
+    default: var(--rp-love)
+    options:
+    -
+      label: Love
+      value: var(--rp-love)
+    -
+      label: Rose
+      value: var(--rp-rose)
+    -
+      label: Gold
+      value: var(--rp-gold)
+    -
+      label: Iris
+      value: var(--rp-iris)
+    -
+      label: Pine
+      value: var(--rp-pine)
+    -
+      label: Foam
+      value: var(--rp-foam)
+  -
+    id: rp-h2
+    title: H2 colour
+    description: Select your H2 colour
+    type: variable-select
+    allowEmpty: false
+    default: var(--rp-iris)
+    options:
+    -
+      label: Love
+      value: var(--rp-love)
+    -
+      label: Rose
+      value: var(--rp-rose)
+    -
+      label: Gold
+      value: var(--rp-gold)
+    -
+      label: Iris
+      value: var(--rp-iris)
+    -
+      label: Pine
+      value: var(--rp-pine)
+    -
+      label: Foam
+      value: var(--rp-foam)
+  -
+    id: rp-h3
+    title: H3 colour
+    description: Select your H3 colour
+    type: variable-select
+    allowEmpty: false
+    default: var(--rp-rose)
+    options:
+    -
+      label: Love
+      value: var(--rp-love)
+    -
+      label: Rose
+      value: var(--rp-rose)
+    -
+      label: Gold
+      value: var(--rp-gold)
+    -
+      label: Iris
+      value: var(--rp-iris)
+    -
+      label: Pine
+      value: var(--rp-pine)
+    -
+      label: Foam
+      value: var(--rp-foam)
+  -
+    id: rp-h4
+    title: H4 colour
+    description: Select your H4 colour
+    type: variable-select
+    allowEmpty: false
+    default: var(--rp-gold)
+    options:
+    -
+      label: Love
+      value: var(--rp-love)
+    -
+      label: Rose
+      value: var(--rp-rose)
+    -
+      label: Gold
+      value: var(--rp-gold)
+    -
+      label: Iris
+      value: var(--rp-iris)
+    -
+      label: Pine
+      value: var(--rp-pine)
+    -
+      label: Foam
+      value: var(--rp-foam)
+  -
+    id: rp-h5
+    title: H5 colour
+    description: Select your H5 colour
+    type: variable-select
+    allowEmpty: false
+    default: var(--rp-foam)
+    options:
+    -
+      label: Love
+      value: var(--rp-love)
+    -
+      label: Rose
+      value: var(--rp-rose)
+    -
+      label: Gold
+      value: var(--rp-gold)
+    -
+      label: Iris
+      value: var(--rp-iris)
+    -
+      label: Pine
+      value: var(--rp-pine)
+    -
+      label: Foam
+      value: var(--rp-foam)
+  -
+    id: rp-h6
+    title: H6 colour
+    description: Select your H6 colour
+    type: variable-select
+    allowEmpty: false
+    default: var(--rp-pine)
+    options:
+    -
+      label: Love
+      value: var(--rp-love)
+    -
+      label: Rose
+      value: var(--rp-rose)
+    -
+      label: Gold
+      value: var(--rp-gold)
+    -
+      label: Iris
+      value: var(--rp-iris)
+    -
+      label: Pine
+      value: var(--rp-pine)
+  -
+    id: rp-misc-config-heading
+    title: Misc Config
+    description: Miscellaneous theme colors
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: rp-highlight
+    title: Highlight Colour
+    description: Select your highlighted colour
+    type: variable-select
+    allowEmpty: false
+    default: var(--rp-highlightHigh)
+    options:
+    -
+      label: Low
+      value: var(--rp-highlightLow)
+    -
+      label: Med
+      value: var(--rp-highlightMed)
+    -
+      label: High
+      value: var(--rp-highlightHigh)
+    -
+      label: Love
+      value: var(--rp-love)
+    -
+      label: Rose
+      value: var(--rp-rose)
+    -
+      label: Gold
+      value: var(--rp-gold)
+    -
+      label: Iris
+      value: var(--rp-iris)
+    -
+      label: Pine
+      value: var(--rp-pine)
+  -
+    id: rp-typography-heading
+    title: Typography & Headings
+    description: Font families, weights, and heading configurations
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: rp-font-families-subheading
+    title: Font Families & Weights
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: font-family-editor
+    title: Editor Font
+    description: Font used for the editor modes
+    type: variable-text
+    default: '"Inter", "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
+  -
+    id: font-family-preview
+    title: Preview Font
+    description: Font used for the preview/reading modes
+    type: variable-text
+    default: 'Georgia, "Times New Roman", serif'
+  -
+    id: font-family-accent
+    title: Accent Font
+    description: Font used for buttons and UI elements
+    type: variable-text
+    default: '"Inter", "Segoe UI", "Helvetica Neue", sans-serif'
+  -
+    id: font-family-code
+    title: Code Font
+    description: Font used for code blocks and inline code
+    type: variable-text
+    default: '"JetBrains Mono", "Fira Code", "Courier New", monospace'
+  -
+    id: heading-font
+    title: Heading Font Family
+    description: Custom font family specifically for H1-H6 headings (falls back to Editor font if empty)
+    type: variable-text
+    default: ''
+  -
+    id: bold-weight
+    title: Bold Text Weight
+    description: Font weight for bold text
+    type: variable-select
+    default: '700'
+    options:
+    -
+      label: Light
+      value: '300'
+    -
+      label: Normal
+      value: '400'
+    -
+      label: Medium
+      value: '500'
+    -
+      label: Semibold
+      value: '600'
+    -
+      label: Bold
+      value: '700'
+    -
+      label: Extrabold
+      value: '800'
+    -
+      label: Black
+      value: '900'
+  -
+    id: rp-headings-subheading
+    title: Headings Customization
+    type: heading
+    level: 2
+    collapsed: true
+
+  # H1
+  -
+    id: rp-h1-subheading
+    title: Heading 1 (H1)
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: font-size-h1
+    title: H1 Font Size
+    type: variable-number
+    default: 26
+    format: px
+  -
+    id: font-weight-h1
+    title: H1 Font Weight
+    type: variable-select
+    default: '500'
+    options:
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
+  -
+    id: h1-divider
+    title: Enable H1 Divider
+    description: Adds a subtle border under H1 headings
+    type: class-toggle
+    default: false
+
+  # H2
+  -
+    id: rp-h2-subheading
+    title: Heading 2 (H2)
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: font-size-h2
+    title: H2 Font Size
+    type: variable-number
+    default: 25
+    format: px
+  -
+    id: font-weight-h2
+    title: H2 Font Weight
+    type: variable-select
+    default: '500'
+    options:
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
+  -
+    id: h2-divider
+    title: Enable H2 Divider
+    description: Adds a subtle border under H2 headings
+    type: class-toggle
+    default: false
+
+  # H3
+  -
+    id: rp-h3-subheading
+    title: Heading 3 (H3)
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: font-size-h3
+    title: H3 Font Size
+    type: variable-number
+    default: 21
+    format: px
+  -
+    id: font-weight-h3
+    title: H3 Font Weight
+    type: variable-select
+    default: '500'
+    options:
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
+
+  # H4
+  -
+    id: rp-h4-subheading
+    title: Heading 4 (H4)
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: font-size-h4
+    title: H4 Font Size
+    type: variable-number
+    default: 20
+    format: px
+  -
+    id: font-weight-h4
+    title: H4 Font Weight
+    type: variable-select
+    default: '500'
+    options:
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
+
+  # H5
+  -
+    id: rp-h5-subheading
+    title: Heading 5 (H5)
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: font-size-h5
+    title: H5 Font Size
+    type: variable-number
+    default: 19
+    format: px
+  -
+    id: font-weight-h5
+    title: H5 Font Weight
+    type: variable-select
+    default: '500'
+    options:
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
+
+  # H6
+  -
+    id: rp-h6-subheading
+    title: Heading 6 (H6)
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: font-size-h6
+    title: H6 Font Size
+    type: variable-number
+    default: 18
+    format: px
+  -
+    id: font-weight-h6
+    title: H6 Font Weight
+    type: variable-select
+    default: '500'
+    options:
+    -
+      label: Light (300)
+      value: '300'
+    -
+      label: Normal (400)
+      value: '400'
+    -
+      label: Medium (500)
+      value: '500'
+    -
+      label: Semibold (600)
+      value: '600'
+    -
+      label: Bold (700)
+      value: '700'
+    -
+      label: Extrabold (800)
+      value: '800'
+    -
+      label: Black (900)
+      value: '900'
+  -
+    id: rp-show-hide-elements-heading
+    title: Show/Hide UI Elements
+    description: Toggle visibility of various UI components
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: rp-autohide-titlebar
+    title: Autohide View Header (Pane Title Bar)
+    description: Hides the header containing the note title at the top of each pane and reveals it on hover.
+    type: class-toggle
+    default: false
+  -
+    id: rp-toggle-scrollbars
+    title: Hide Scrollbars
+    description: Completely hides scrollbars across the application.
+    type: class-toggle
+    default: false
+  -
+    id: rp-hide-status-bar
+    title: Hide Status Bar
+    description: Hides the status bar at the bottom of the window.
+    type: class-toggle
+    default: false
+  -
+    id: rp-tooltip-toggle
+    title: Hide Tooltips
+    description: Prevents tooltips from appearing when hovering over icons.
+    type: class-toggle
+    default: false
+  -
+    id: rp-hide-external-link-icon
+    title: Hide External Link Icon
+    description: Hides the small arrow icon next to external links.
+    type: class-toggle
+    default: false
+  -
+    id: rp-toggle-metadata
+    title: Hide Frontmatter Metadata
+    description: Hides the frontmatter metadata panel at the top of notes.
+    type: class-toggle
+    default: false
+  -
+    id: rp-markdown-elements-heading
+    title: Markdown Elements
+    description: Custom styles for callouts, code blocks, tables, lists, tags, and embeds
+    type: heading
+    level: 1
+    collapsed: true
+
+  # Callouts
+  -
+    id: rp-callouts-subheading
+    title: Callouts
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: rp-callout-style
+    title: Callout Style
+    type: class-select
+    default: none
+    options:
+    -
+      label: Default
+      value: none
+    -
+      label: Sleek (Border outline & tinted header)
+      value: rp-callout-sleek
+    -
+      label: Vanilla (No outer background, filled header & primary content body)
+      value: rp-callout-vanilla
+  -
+    id: callout-radius
+    title: Callout Border Radius
+    type: variable-number
+    default: 8
+    format: px
+  -
+    id: callout-title-padding
+    title: Callout Title Padding
+    type: variable-text
+    default: 8px 12px
+  -
+    id: callout-content-padding
+    title: Callout Content Padding
+    type: variable-text
+    default: 12px 16px
+
+  # Checkboxes
+  -
+    id: rp-checkboxes-subheading
+    title: Checkboxes
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: rp-custom-checkboxes
+    title: Enable Custom Checkboxes
+    description: Apply modern stylized checkboxes instead of standard system checkboxes
+    type: class-toggle
+    default: false
+
+  # Codeblocks
+  -
+    id: rp-codeblocks-subheading
+    title: Codeblocks
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: rp-codeblock-edit-nowrap
+    title: Codeblock Line Wrap (Edit Mode)
+    description: Prevent line wrapping in editing views (adds horizontal scrollbar)
+    type: class-toggle
+    default: false
+  -
+    id: rp-codeblock-preview-nowrap
+    title: Codeblock Line Wrap (Preview Mode)
+    description: Prevent line wrapping in reading views (adds horizontal scrollbar)
+    type: class-toggle
+    default: false
+
+  # Embeds
+  -
+    id: rp-embeds-subheading
+    title: Embeds & Media
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: embed-corner-radius
+    title: Embed Corner Radius
+    description: Customize border-radius of images, videos, and iframe embeds
+    type: variable-number
+    default: 8
+    format: px
+
+  # Lists
+  -
+    id: rp-lists-subheading
+    title: Lists
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: list-spacing
+    title: List Vertical Spacing
+    type: variable-text
+    default: 0.1em
+  -
+    id: list-indent
+    title: List Indent Size
+    type: variable-text
+    default: 1.5em
+  -
+    id: rp-list-bullet-color-toggle
+    title: Enable Custom Bullet Color
+    type: class-toggle
+    default: false
+  -
+    id: list-bullet-color
+    title: Unordered List Bullet Color
+    type: variable-themed-color
+    default-light: '#'
+    default-dark: '#'
+    format: hex
+
+  # Tables
+  -
+    id: rp-tables-subheading
+    title: Tables
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: rp-table-zebra
+    title: Enable Alternate Row Shading
+    description: Adds a background tint to every second row for easier reading
+    type: class-toggle
+    default: false
+  -
+    id: rp-table-width
+    title: Custom Table Width
+    description: Set tables to stretch to a custom width percentage
+    type: class-toggle
+    default: false
+  -
+    id: table-width-pct
+    title: Table Width Percentage
+    type: variable-number
+    default: 100
+    format: "%"
+  -
+    id: rp-table-center
+    title: Center Tables
+    description: Automatically centers tables on the page
+    type: class-toggle
+    default: false
+
+  # Tags
+  -
+    id: rp-tags-subheading
+    title: Tags
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: tag-border-width
+    title: Tag Border Width
+    type: variable-number
+    default: 0
+    format: px
+  -
+    id: tag-radius
+    title: Tag Border Radius
+    type: variable-number
+    default: 4
+  -
+    id: rp-layout-margins-heading
+    title: Layout & Margins
+    description: Customize page widths, line widths, and page margins
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: file-line-width
+    title: Maximum Line Width (Readable Mode)
+    description: Sets the maximum width of the text content when "Readable line width" is enabled.
+    type: variable-number
+    default: 900
+    format: px
+  -
+    id: rp-toggle-preview
+    title: Enable Custom Margins
+    description: Enable custom side margins for your notes.
+    type: class-toggle
+    default: false
+  -
+    id: custom-file-margins
+    title: Note Side Margins
+    description: Side padding/margins of the note content (active only if "Enable Custom Margins" is turned on).
+    type: variable-number
+    default: 32
+    format: px
+
+  -
+    id: rp-workspace-heading
+    title: Workspace
+    description: Adjust Obsidian's sidebar, status bar, tabs, canvas, and PDF viewer settings
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: rp-canvas-subheading
+    title: Canvas
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: rp-canvas-dark-bg
+    title: Darker Canvas Background
+    description: Darkens the background of the Canvas whiteboard view
+    type: class-toggle
+    default: false
+  -
+    id: rp-translucency-subheading
+    title: Translucency
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-translucency-opacity
+    title: Window Opacity (Translucency)
+    description: Adjust the opacity of the translucent window background (requires "Translucent window" system setting enabled).
+    type: variable-number
+    default: 0.15
+  -
+    id: rp-statusbar-subheading
+    title: Status Bar
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-status-bar-select
+    title: Status Bar Style
+    type: class-select
+    default: none
+    options:
+    -
+      label: Default
+      value: none
+    -
+      label: Floating
+      value: anp-floating-status-bar
+    -
+      label: Fixed
+      value: anp-fixed-status-bar
+  -
+    id: rp-tabs-subheading
+    title: Tabs & Stacked Tabs
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-alt-tab-style
+    title: Tab Style
+    type: class-select
+    allowEmpty: false
+    default: anp-default-tab
+    options:
+    -
+      label: Default
+      value: anp-default-tab
+    -
+      label: Depth
+      value: anp-depth-tab-toggle
+    -
+      label: Minimalistic
+      value: anp-mini-tab-toggle
+    -
+      label: Safari-style (Animated)
+      value: anp-alternate-tab-toggle
+    -
+      label: Safari-style (Vanilla)
+      value: anp-safari-tab-toggle
+  -
+    id: anp-alt-tab-custom-height
+    title: Custom Tab Height
+    description: Adjust height of the tabs bar.
+    type: variable-number
+    default: 40
+    format: px
+  -
+    id: anp-disable-newtab-align
+    title: Disable New Tab Button Right Alignment
+    description: Keeps the new tab button immediately next to the last tab.
+    type: class-toggle
+    default: false
+
+  # Safari Tab Settings
+  -
+    id: rp-safari-tabs-subheading
+    title: Safari Tab Settings
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-safari-tab-radius
+    title: Safari Tab Radius
+    description: Corner radius of Safari-style tabs.
+    type: variable-number
+    default: 6
+    format: px
+  -
+    id: anp-safari-border-width
+    title: Safari Tab Border Width
+    description: Border width of Safari-style tabs.
+    type: variable-number
+    default: 1
+    format: px
+  -
+    id: anp-safari-tab-gap
+    title: Safari Tab Gap
+    description: Spacing between Safari-style tabs.
+    type: variable-number
+    default: 10
+    format: px
+
+  # Depth Tab Settings
+  -
+    id: rp-depth-tabs-subheading
+    title: Depth Tab Settings
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-depth-tab-gap
+    title: Depth Tab Gap
+    description: Spacing between Depth-style tabs.
+    type: variable-number
+    default: 10
+    format: px
+  -
+    id: anp-depth-tab-opacity
+    title: Depth Tab Inactive Opacity
+    description: Opacity of inactive tabs in Depth style (0.0 to 1.0).
+    type: variable-number
+    default: 0.6
+
+  # Stacked Tabs Settings
+  -
+    id: rp-stacked-tabs-subheading
+    title: Stacked Tabs Settings
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-stacked-header-width
+    title: Stacked Tabs Header Width
+    description: Adjust width of stacked tab headers.
+    type: variable-number
+    default: 40
+    format: px
+  -
+    id: rp-layouts-subheading
+    title: Workspace Layout
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-layout-select
+    title: Workspace Layout Variant
+    type: class-select
+    allowEmpty: false
+    default: none
+    options:
+    -
+      label: Default
+      value: none
+    -
+      label: Border
+      value: anp-border-layout
+    -
+      label: Cards
+      value: anp-card-layout
+  -
+    id: anp-bg-fix
+    title: Background Fix for Colors
+    description: Fixes background coloring issues when applying custom colors to the layouts.
+    type: class-toggle
+    default: false
+  -
+    id: anp-hide-borders
+    title: Hide Borders
+    description: Hides outline borders around tabs and dividers.
+    type: class-toggle
+    default: false
+
+  # Card Layout Settings
+  -
+    id: rp-card-layout-subheading
+    title: Card Layout Settings
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-card-radius
+    title: Card Radius
+    description: Corner radius of workspace cards (Defaults to 16px).
+    type: variable-number
+    default: 16
+    format: px
+  -
+    id: anp-card-layout-padding
+    title: Card Layout Padding
+    description: Outer padding/spacing around workspace cards.
+    type: variable-number
+    default: 10
+    format: px
+  -
+    id: anp-card-header-left-padding
+    title: Tab Left Padding
+    description: Indent padding for tab headers inside the card layout.
+    type: variable-number
+    default: 20
+    format: px
+  -
+    id: anp-card-shadows
+    title: Enable Card Shadows
+    description: Adds a subtle elevation shadow to workspace cards.
+    type: class-toggle
+    default: false
+  -
+    id: anp-card-layout-actions
+    title: Enable Card Format for Actions
+    description: Styles the left ribbon action panel as a card.
+    type: class-toggle
+    default: false
+  -
+    id: anp-card-layout-filebrowser
+    title: Enable Card Format for File Browser
+    description: Styles the file explorer panel as a card.
+    type: class-toggle
+    default: false
+
+  # Border Layout Settings
+  -
+    id: rp-border-layout-subheading
+    title: Border Layout Settings
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-border-radius
+    title: Border Layout Radius
+    description: Corner radius of workspace border segments (Defaults to 16px).
+    type: variable-number
+    default: 16
+    format: px
+  -
+    id: anp-border-padding
+    title: Border Layout Padding
+    description: Outer padding around workspace border segments.
+    type: variable-number
+    default: 20
+    format: px
+*/
+.rp-accent-rose,
+.rp-accent-full {
+  --rp-accent: var(--rp-rose) ;
+}
+
+.rp-accent-iris {
+  --rp-accent: var(--rp-iris) ;
+}
+
+.rp-accent-pine {
+  --rp-accent: var(--rp-pine) ;
+}
+
+.rp-accent-foam {
+  --rp-accent: var(--rp-foam) ;
+}
+
+.rp-accent-gold {
+  --rp-accent: var(--rp-gold) ;
+}
+
+.rp-accent-love {
+  --rp-accent: var(--rp-love) ;
+}
+
+/* =========================================================================
+   layout-margins.css
+   Style overrides for line widths and custom margins
+   ========================================================================= */
+/* Readable Line Width Overrides */
+.markdown-source-view.is-readable-line-width .CodeMirror {
+  max-width: var(--file-line-width, 900px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-section {
+  max-width: var(--file-line-width, 900px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Custom note side margins */
+.rp-toggle-preview {
+  --file-margins: var(--custom-file-margins, 32px) !important;
+}
+
+.rp-toggle-preview .markdown-preview-view,
+.rp-toggle-preview .mod-single-child .markdown-preview-view {
+  padding-left: var(--file-margins) !important;
+  padding-right: var(--file-margins) !important;
+}
+
+/* Style Settings UI Suffix helper */
+.style-settings-container .setting-item:is([data-id=custom-file-margins], [data-id=file-line-width]) .setting-item-control::after {
+  content: "px";
+  margin-left: 4px;
+  color: var(--text-muted);
+}
+
+/* =========================================================================
+   markdown-elements.css
+   Style overrides for callouts, code blocks, lists, tables, tags, and embeds
+   ========================================================================= */
+/* --- Callouts --- */
+.callout {
+  border-radius: var(--callout-radius, 8px) !important;
+  padding: var(--callout-padding, 8px 12px) !important;
+}
+
+.callout-title {
+  padding: var(--callout-title-padding, 8px 12px) !important;
+}
+
+.callout-content {
+  padding: var(--callout-content-padding, 12px 16px) !important;
+}
+
+/* Sleek Callout Style */
+.rp-callout-sleek .callout {
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--background-secondary-alt) !important;
+  border-left: 4px solid rgb(var(--callout-color)) !important;
+  box-shadow: none !important;
+}
+
+.rp-callout-sleek .callout-title {
+  background-color: rgba(var(--callout-color), 0.08) !important;
+}
+
+.rp-callout-sleek .callout-content {
+  border-top: 1px dashed rgba(var(--callout-color), 0.2) !important;
+}
+
+/* Vanilla Callout Style */
+.rp-callout-vanilla .callout {
+  background-color: transparent !important;
+  border: 1px solid var(--border-color) !important;
+  border-left: 4px solid rgb(var(--callout-color)) !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.rp-callout-vanilla .callout-title {
+  background-color: rgba(var(--callout-color), 0.08) !important;
+  padding: var(--callout-title-padding, 8px 12px) !important;
+}
+
+.rp-callout-vanilla .callout-content {
+  background-color: var(--background-primary) !important;
+  padding: var(--callout-content-padding, 12px 16px) !important;
+}
+
+/* --- Checkboxes --- */
+/* Custom Checkboxes: Clean modern checkmark styling */
+.rp-custom-checkboxes .markdown-rendered .task-list-item-checkbox,
+.rp-custom-checkboxes .task-list-item-checkbox {
+  border-radius: 4px !important;
+  width: 1.2em !important;
+  height: 1.25em !important;
+  border: 1.5px solid var(--text-muted) !important;
+  transition: all 0.2s ease !important;
+  box-shadow: none !important;
+  top: 0.15em !important;
+}
+
+.rp-custom-checkboxes .markdown-rendered .task-list-item-checkbox:checked,
+.rp-custom-checkboxes .task-list-item-checkbox:checked {
+  background-color: var(--rp-accent) !important;
+  border-color: var(--rp-accent) !important;
+  background-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>') !important;
+}
+
+/* --- Codeblocks --- */
+/* Prevent wrapping inside edit mode (adds horizontal scroll) */
+.rp-codeblock-edit-nowrap .HyperMD-codeblock {
+  white-space: pre !important;
+  word-break: normal !important;
+  overflow-x: auto !important;
+}
+
+/* Prevent wrapping inside reading mode (adds horizontal scroll) */
+.rp-codeblock-preview-nowrap .markdown-preview-view pre code {
+  white-space: pre !important;
+  word-break: normal !important;
+  overflow-x: auto !important;
+}
+
+/* --- Embeds & Media --- */
+.markdown-rendered img,
+.markdown-rendered video,
+.markdown-rendered iframe {
+  border-radius: var(--embed-corner-radius, 8px) !important;
+}
+
+/* --- Lists --- */
+.markdown-rendered ul,
+.markdown-rendered ol {
+  padding-inline-start: var(--list-indent, 1.5em) !important;
+}
+
+.markdown-rendered li {
+  padding-top: var(--list-spacing, 0.1em) !important;
+  padding-bottom: var(--list-spacing, 0.1em) !important;
+}
+
+/* Custom list bullet colors */
+.rp-list-bullet-color-toggle ul > li::marker,
+.rp-list-bullet-color-toggle .cm-formatting-list {
+  color: var(--list-bullet-color, var(--rp-iris)) !important;
+}
+
+/* --- Tables --- */
+/* Zebra Striping */
+.rp-table-zebra tr:nth-child(even) {
+  background-color: var(--background-secondary-alt) !important;
+}
+
+/* Custom Table Width */
+.rp-table-width .markdown-rendered table {
+  width: var(--table-width-pct, 100%) !important;
+  max-width: var(--table-width-pct, 100%) !important;
+}
+
+/* Center Tables */
+.rp-table-center .markdown-rendered table {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* --- Tags --- */
+.tag, a.tag {
+  border-width: var(--tag-border-width, 0px) !important;
+  border-style: solid !important;
+  border-color: var(--border-color) !important;
+  border-radius: var(--tag-radius, 4px) !important;
+}
+
+/* =========================================================================
+   style-settings-gui.css
+   Style overrides for the Style Settings plugin settings dashboard UI
+   ========================================================================= */
+.style-settings-container:empty {
+  display: none !important;
+}
+
+.style-settings-heading[data-level] {
+  padding-top: var(--size-4-2) !important;
+  padding-bottom: var(--size-4-2) !important;
+}
+
+.style-settings-heading[data-level="0"]:not(.is-collapsed) {
+  margin-bottom: var(--size-4-2) !important;
+}
+
+.style-settings-heading:not([data-level="0"]) {
+  border-top: 1px solid var(--background-modifier-border) !important;
+  border-bottom: none !important;
+}
+
+.style-settings-heading:not([data-level="0"], .is-collapsed) {
+  margin-bottom: 0 !important;
+}
+
+/* Level 1 & 2 Subheading containers get indented boxes with background shading */
+.style-settings-heading:not([data-level="0"]) + .style-settings-container {
+  border: 1px solid var(--background-modifier-border) !important;
+  border-radius: 6px !important;
+  padding: var(--size-4-2) !important;
+  padding-left: var(--size-4-6) !important;
+  background-color: var(--background-secondary-alt) !important;
+  overflow-x: hidden !important;
+  margin-top: 4px !important;
+  margin-bottom: 12px !important;
+}
+
+.style-settings-heading[data-level="0"]:not(.is-collapsed) + .style-settings-container {
+  border-bottom: 1px solid var(--background-modifier-border) !important;
+}
+
+.style-settings-heading[data-level="1"] {
+  border-top-color: var(--background-modifier-border) !important;
+}
+
+.style-settings-heading:not([data-level="0"]):nth-child(-n+2),
+.style-settings-heading:not([data-level="0"], .is-collapsed) + .style-settings-container + .style-settings-heading,
+.style-settings-container .setting-item + .setting-item-heading {
+  border-top-width: 0 !important;
+}
+
+/* Distinct color for our custom category header name */
+.style-settings-heading[data-id=rose-pine-settings] .setting-item-name {
+  color: var(--text-accent) !important;
+}
+
+/* Suffix helpers for Layout custom measurements */
+.style-settings-container .setting-item:is([data-id=anp-card-radius], [data-id=anp-card-layout-padding], [data-id=anp-card-header-left-padding], [data-id=anp-border-radius], [data-id=anp-border-padding]) .setting-item-control::after {
+  content: "px" !important;
+  margin-left: 4px !important;
+  color: var(--text-muted) !important;
+}
+
+/* =========================================================================
+   workspace.css (Module: Canvas)
+   Canvas styling overrides from AnuPpuccin
+   ========================================================================= */
+.canvas-card-menu {
+  box-shadow: none !important;
+  border: 1px solid var(--background-modifier-border) !important;
+  background-color: var(--background-secondary) !important;
+}
+
+.canvas-card-menu .canvas-card-menu-button svg {
+  fill: var(--background-secondary) !important;
+}
+
+.canvas-card-menu .canvas-card-menu-button:hover {
+  color: var(--text-normal) !important;
+}
+
+.canvas-controls button {
+  background-color: var(--background-secondary) !important;
+}
+
+.canvas-controls button:hover {
+  filter: brightness(95%) !important;
+}
+
+/* Darker Canvas Background Toggle */
+.rp-canvas-dark-bg .canvas-wrapper {
+  background-color: var(--background-secondary) !important;
+}
+
+.rp-canvas-dark-bg .canvas-controls button,
+.rp-canvas-dark-bg .canvas-card-menu {
+  background-color: var(--background-primary) !important;
+}
+
+.rp-canvas-dark-bg .canvas-card-menu .canvas-card-menu-button svg {
+  fill: var(--background-primary) !important;
+}
+
+.canvas-selection {
+  background-color: rgba(var(--rp-accent), 0.1) !important;
+  border: 2px solid var(--color-accent) !important;
+}
+
+.canvas-node.is-themed .canvas-node-label {
+  color: rgb(var(--canvas-color)) !important;
+}
+
+.canvas-node-placeholder {
+  color: rgb(var(--canvas-color)) !important;
+}
+
+.canvas-node-placeholder::after {
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+}
+
+.canvas-placeholder-message {
+  background: rgba(var(--rp-accent), 0.1) !important;
+}
+
+/* =========================================================================
+   workspace-layouts.css
+   Card layout and Border layout styles ported from AnuPpuccin
+   ========================================================================= */
+/* --- General Layout fixes --- */
+.anp-bg-fix .workspace,
+.anp-bg-fix .app-container,
+.anp-bg-fix .horizontal-main-container,
+.anp-bg-fix .workspace-split,
+.anp-bg-fix .workspace-tabs,
+.anp-bg-fix .workspace-tab-container {
+  background-color: var(--tab-container-background) !important;
+}
+
+.anp-hide-borders {
+  --tab-outline-color: transparent !important;
+  --divider-color: transparent !important;
+}
+
+/* =========================================================================
+   CARD LAYOUT OVERRIDES
+   ========================================================================= */
+body.anp-card-layout {
+  --card-background-color: var(--rp-base);
+  --card-foreground-color: var(--background-primary);
+  --divider-color: var(--background-modifier-border); /* Visible dividers by default */
+  --tab-outline-color: var(--background-modifier-border);
+  --divider-color-hover: var(--background-modifier-border);
+  --divider-width: 1px;
+  --divider-width-hover: 1px;
+  --tab-container-background: var(--card-background-color);
+  --file-header-border: var(--border-width) dashed var(--background-modifier-border);
+  --ribbon-padding: 0;
+}
+
+body.anp-card-layout.anp-hide-borders {
+  --tab-outline-color: transparent !important;
+  --divider-color: transparent !important;
+}
+
+body.anp-card-layout.anp-hide-borders .menu {
+  border: 0px !important;
+}
+
+/* Force dark crust backing on workspace containers conditionally when bg-fix is toggled */
+body.anp-card-layout.anp-bg-fix .workspace,
+body.anp-card-layout.anp-bg-fix .workspace-split,
+body.anp-card-layout.anp-bg-fix .workspace-tabs,
+body.anp-card-layout.anp-bg-fix .workspace-tab-container,
+body.anp-card-layout.anp-bg-fix .sidebar-toggle-button,
+body.anp-card-layout.anp-bg-fix .workspace-tabs.mod-top {
+  --tab-container-background: var(--card-background-color) !important;
+  background-color: var(--tab-container-background) !important;
+}
+
+/* If bg-fix is not active, we still apply transparent backgrounds to splits so the body/workspace background shows through */
+body.anp-card-layout:not(.anp-bg-fix) .workspace-split,
+body.anp-card-layout:not(.anp-bg-fix) .workspace-tabs,
+body.anp-card-layout:not(.anp-bg-fix) .workspace-tab-container {
+  background-color: transparent !important;
+}
+
+body.anp-card-layout .workspace-tabs.mod-top:has(.obsidian-banner-wrapper) {
+  --file-header-border: none !important;
+}
+
+body.anp-card-layout.is-focused,
+body.anp-card-layout.is-focused .sidebar-toggle-button,
+body.anp-card-layout.is-focused .workspace-tabs.mod-top {
+  --tab-container-background: var(--card-background-color) !important;
+}
+
+/* Force dark background color on parent splits and leaves */
+body.anp-card-layout .mod-left-split .workspace-tabs .workspace-leaf,
+body.anp-card-layout .mod-right-split .workspace-tabs .workspace-leaf,
+body.anp-card-layout .mod-left-split,
+body.anp-card-layout .mod-vertical .workspace-tab-container,
+body.anp-card-layout .mod-vertical,
+body.anp-card-layout .workspace-split.mod-vertical,
+body.anp-card-layout .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+body.anp-card-layout .mod-root .workspace-tabs .workspace-leaf,
+body.anp-card-layout .workspace-ribbon.mod-left,
+body.anp-card-layout .workspace-ribbon.mod-left:before {
+  background-color: var(--tab-container-background) !important;
+}
+
+/* Ribbon border */
+body.anp-card-layout:not(.anp-hide-borders) .workspace-ribbon.mod-left {
+  border-right: 1px solid var(--divider-color) !important;
+}
+
+body.anp-card-layout .workspace-ribbon.mod-left {
+  margin-top: calc(var(--header-height) - 1px) !important;
+}
+
+body.anp-card-layout .workspace-tab-header-container,
+body.anp-card-layout .workspace-ribbon.mod-left:before {
+  border-bottom: none !important;
+}
+
+body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-container {
+  padding-left: var(--anp-card-header-left-padding, 20px) !important;
+}
+
+body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner {
+  margin: 6px -5px calc(var(--tab-outline-width) * -1) !important;
+  z-index: 1 !important;
+}
+
+body.anp-card-layout .mod-left-split .workspace-tab-container,
+body.anp-card-layout .mod-right-split .workspace-tab-container {
+  padding-left: var(--anp-card-layout-padding, 10px) !important;
+  padding-right: var(--anp-card-layout-padding, 10px) !important;
+  background-color: var(--tab-container-background) !important;
+}
+
+/* Enforce borders and card background color on ALL cards (notes, file explorer, outline, etc.) */
+body.anp-card-layout .workspace-leaf-content {
+  background-color: var(--card-foreground-color) !important;
+  border: 1px solid var(--tab-outline-color) !important;
+}
+
+/* Apply rounding and bottom margins to all cards */
+body.anp-card-layout:not(.is-phone) .workspace-leaf-content {
+  border-radius: var(--anp-card-radius, 16px) !important;
+  margin-bottom: var(--anp-card-layout-padding, 10px) !important;
+}
+
+/* OVERRIDE: If the file browser card toggle is OFF, remove card styles from sidebars */
+body.anp-card-layout:not(.anp-card-layout-filebrowser) .mod-left-split .workspace-leaf-content,
+body.anp-card-layout:not(.anp-card-layout-filebrowser) .mod-right-split .workspace-leaf-content {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Vault Profile Bottom Bar customization to prevent harsh cut */
+body.anp-card-layout .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  border: none !important;
+  margin: var(--anp-card-layout-padding, 10px) !important;
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
+  background-color: transparent !important;
+}
+
+body.anp-card-layout.anp-card-shadows .workspace-split .workspace-leaf-content,
+body.anp-card-layout.anp-card-shadows.anp-card-layout-actions .side-dock-actions {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.anp-card-layout .workspace-split .mod-stacked .workspace-leaf-content {
+  border-radius: 0 !important;
+  border: none !important;
+  margin-bottom: 0px !important;
+  border-left: none !important;
+}
+
+body.anp-card-layout .workspace-split.mod-horizontal > * {
+  width: unset !important;
+}
+
+body.anp-card-layout .workspace .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+  border-style: solid !important;
+  border-radius: var(--anp-card-radius, 16px) 0px 0px var(--anp-card-radius, 16px) !important;
+  border-width: var(--tab-outline-width) !important;
+  border-color: var(--tab-outline-color) !important;
+  border-right: var(--tab-outline-width) dashed var(--tab-outline-color) !important;
+}
+
+body.anp-card-layout .workspace .workspace-tabs.mod-stacked .workspace-leaf {
+  border-left-width: 0px !important;
+  border-top-width: var(--tab-outline-width) !important;
+  border-bottom-width: var(--tab-outline-width) !important;
+  border-style: solid !important;
+  border-color: var(--tab-outline-color) !important;
+  border-radius: 0 var(--anp-card-radius, 16px) var(--anp-card-radius, 16px) 0 !important;
+}
+
+body.anp-card-layout .workspace .workspace-tabs.mod-stacked .workspace-tab-container {
+  padding-bottom: var(--anp-card-layout-padding, 10px) !important;
+}
+
+body.anp-card-layout .workspace-drop-overlay:before {
+  width: calc(100% - 6px - var(--anp-card-layout-padding, 0) * 2) !important;
+  height: calc(100% - 6px - var(--anp-card-layout-padding, 0) * 2) !important;
+  margin: auto !important;
+}
+
+body.anp-card-layout:not(.is-phone) .mod-vertical .workspace-tabs {
+  padding-left: var(--anp-card-layout-padding, 10px) !important;
+  padding-right: var(--anp-card-layout-padding, 10px) !important;
+}
+
+/* Card Format for Actions vertical toolbar (AnuPpuccin design alignment) */
+body.anp-card-layout.anp-card-layout-actions .side-dock-actions {
+  border-radius: 0px var(--anp-card-radius, 16px) var(--anp-card-radius, 16px) 0px !important;
+  margin-top: 2px !important;
+  border-width: 1px 1px 0px 1px !important;
+  border-style: solid !important;
+  border-color: var(--tab-outline-color) !important;
+  background-color: var(--card-foreground-color) !important;
+  padding: var(--size-4-2) var(--size-4-1) var(--size-4-3) !important;
+}
+
+body.anp-card-layout.anp-card-layout-actions .workspace-ribbon.mod-left {
+  background-color: transparent !important;
+  border-right: none !important;
+  margin-right: var(--anp-card-layout-padding, 10px) !important;
+}
+
+/* =========================================================================
+   BORDER LAYOUT OVERRIDES
+   ========================================================================= */
+body.anp-border-layout {
+  --card-background-color: var(--rp-base);
+  --card-foreground-color: var(--background-primary);
+  --border-border-style: 1px solid var(--tab-outline-color);
+  --anp-border-bottom-padding: var(--anp-border-padding, 20px);
+}
+
+body.anp-border-layout .horizontal-main-container {
+  background-color: var(--card-background-color) !important;
+  --titlebar-background: var(--card-background-color);
+  --ribbon-background: var(--card-background-color);
+  --ribbon-background-collapsed: var(--card-background-color);
+}
+
+body.anp-border-layout.anp-fixed-status-bar {
+  --anp-border-bottom-padding: calc(var(--anp-border-padding, 20px) - 18px) !important;
+}
+
+body.anp-border-layout .workspace .workspace-tab-container {
+  border-bottom: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-tabs:nth-child(2).workspace-tabs.mod-top-left-space > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2).mod-top-left-space > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2).mod-top-left-space > .workspace-tab-container {
+  border-bottom-left-radius: var(--anp-border-radius, 16px) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root .workspace-tabs.mod-top-left-space .workspace-tab-container {
+  border-top-left-radius: var(--anp-border-radius, 16px) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:last-child .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:last-child .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-left-radius: var(--anp-border-radius, 16px) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical:last-child > .workspace-tabs:nth-child(2) .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical:last-child > .workspace-tabs:nth-child(2) .workspace-tab-container {
+  border-bottom-left-radius: var(--anp-border-radius, 16px) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root .workspace-tabs.mod-top-left-space > .workspace-tab-container {
+  border-left: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs > .workspace-tab-container {
+  border-left: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:not(.mod-top-left-space) > .workspace-tab-header-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:not(.mod-top-left-space) > .workspace-tab-header-container {
+  border-left: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2) > .workspace-tab-container {
+  border-left: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2):not(.mod-top-left-space) > .workspace-tab-header-container {
+  border-left: var(--border-border-style) !important;
+}
+
+/* Right split rules when collapsed */
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-tabs:last-child.mod-top-right-space > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-tabs:last-child.mod-top-right-space > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-tabs:last-child.mod-top-right-space > .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, 16px) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root .workspace-tabs.mod-top-right-space .workspace-tab-container {
+  border-top-right-radius: var(--anp-border-radius, 16px) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:last-child > .workspace-tabs:last-child .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:last-child > .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, 16px) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:last-child > .workspace-split.mod-vertical:last-child > .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, 16px) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root .workspace-tabs.mod-top-right-space > .workspace-tab-container {
+  border-right: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:last-child > .workspace-tabs > .workspace-tab-container {
+  border-right: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:last-child > .workspace-tabs:not(.mod-top-right-space) > .workspace-tab-header-container {
+  border-right: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:last-child > .workspace-split.mod-vertical > .workspace-tabs:last-child > .workspace-tab-container {
+  border-right: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:last-child > .workspace-split.mod-vertical > .workspace-tabs:last-child:not(.mod-top-right-space) > .workspace-tab-header-container {
+  border-right: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-left-split {
+  background-color: var(--card-background-color) !important;
+  padding-left: calc(var(--anp-border-padding, 20px) - 20px) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs {
+  background-color: var(--card-background-color) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container {
+  border-left: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container .workspace-leaf {
+  background-color: var(--card-foreground-color) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  border-left: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-container {
+  border-top: var(--border-border-style) !important;
+  border-left: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  border: none !important;
+  background-color: var(--card-foreground-color) !important;
+  border-left: var(--border-border-style) !important;
+  border-bottom: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-right-split {
+  background-color: var(--card-background-color) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs {
+  background-color: var(--card-background-color) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-container {
+  border-right: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-container .workspace-leaf {
+  background-color: var(--card-foreground-color) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  border-right: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-container {
+  border-top: var(--border-border-style) !important;
+  border-right: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
+  background-color: var(--card-background-color) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) > .workspace-split {
+  padding-bottom: 0 !important;
+}
+
+body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) .workspace-tabs {
+  background-color: var(--card-background-color) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) .workspace-tabs.mod-top .workspace-tab-container {
+  border-top: var(--border-border-style) !important;
+}
+
+body.anp-border-layout .workspace .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  background-color: var(--card-foreground-color) !important;
+}
+
+body.anp-border-layout .workspace .workspace-tabs.mod-top .workspace-tab-header-container {
+  border-bottom: none !important;
+}
+
+body.anp-border-layout .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+body.anp-border-layout .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  height: calc(100% + -1 * var(--header-height) + -1 * var(--anp-border-bottom-padding, 20px)) !important;
+  bottom: var(--anp-border-bottom-padding, 20px) !important;
+}
+
+body.anp-border-layout .workspace-split {
+  --divider-vertical-height: calc(100% + -1 * var(--header-height)) !important;
+}
+
+body.anp-border-layout .workspace-ribbon.mod-left:before {
+  border-bottom: 1px solid var(--card-background-color) !important;
+}
+
+body.anp-border-layout .workspace-ribbon.mod-left,
+body.anp-border-layout .workspace-ribbon.mod-left.is-focused {
+  border-right-color: var(--card-background-color) !important;
+}
+
+body.anp-border-layout.is-popout-window .workspace {
+  margin-left: var(--anp-border-padding, 20px) !important;
+}
+
+/* PC margin & rounding overrides */
+body.anp-border-layout:not(.is-mobile) .workspace {
+  margin-right: var(--anp-border-padding, 20px) !important;
+}
+
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-left-split {
+  padding-bottom: var(--anp-border-bottom-padding, 20px) !important;
+}
+
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-container {
+  border-top-left-radius: var(--anp-border-radius, 16px) !important;
+}
+
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  border-bottom-left-radius: var(--anp-border-radius, 16px) !important;
+}
+
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-right-split {
+  padding-bottom: var(--anp-border-bottom-padding, 20px) !important;
+}
+
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-right-split .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, 16px) !important;
+}
+
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-container {
+  border-top-right-radius: var(--anp-border-radius, 16px) !important;
+}
+
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-root:not(.mod-right-split):not(.mod-left-split) {
+  padding-bottom: var(--anp-border-bottom-padding, 20px) !important;
+}
+
+/* =========================================================================
+   workspace-statusbar.css
+   Status bar styling overrides from AnuPpuccin
+   ========================================================================= */
+/* Floating Status Bar */
+.anp-floating-status-bar {
+  --status-bar-position: absolute;
+  --status-bar-radius: 6px;
+  --status-bar-border-width: 1px;
+}
+
+.anp-floating-status-bar .status-bar {
+  position: absolute !important;
+  transform: translateX(calc(100% - 25px)) !important;
+  transition: transform 300ms 150ms !important;
+  bottom: 8px !important;
+  right: 8px !important;
+  z-index: 999 !important;
+  border-radius: 6px !important;
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--background-secondary) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  height: auto !important;
+  padding: 4px 8px !important;
+}
+
+.anp-floating-status-bar .status-bar::before {
+  width: 100%;
+  min-height: 100%;
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+}
+
+.anp-floating-status-bar .status-bar:hover {
+  transform: none !important;
+  transition: transform 300ms 150ms !important;
+}
+
+/* Fixed Status Bar */
+.anp-fixed-status-bar .status-bar {
+  position: relative !important;
+  --status-bar-position: relative;
+  --status-bar-radius: 0;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+/* =========================================================================
+   workspace-tabs.css
+   Tab styles (Default, Depth, Minimalistic, Safari-style) and Stacked Tabs
+   ========================================================================= */
+/* --- Universal Tab Configurations --- */
+body {
+  --header-height: var(--anp-alt-tab-custom-height, 40px) !important;
+  --tab-stacked-header-width: var(--anp-stacked-header-width, 40px) !important;
+}
+
+.workspace-tabs.mod-stacked {
+  --tab-stacked-header-width: var(--anp-stacked-header-width, 40px) !important;
+}
+
+/* Align new tab button to the right */
+body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-split.mod-vertical .workspace-tab-header-spacer {
+  display: none !important;
+}
+
+body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-split.mod-vertical .workspace-tab-header-new-tab {
+  margin-left: auto !important;
+}
+
+/* --- Minimalistic Tabs --- */
+.anp-mini-tab-toggle {
+  --header-height: var(--anp-alt-tab-custom-height, 40px);
+  --tab-stacked-header-width: var(--anp-stacked-header-width, 40px);
+}
+
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header::before,
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header::after {
+  display: none !important;
+}
+
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header.is-active {
+  border-bottom: 2px solid var(--color-accent) !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header.is-active .workspace-tab-header-inner {
+  border-radius: var(--tab-radius) var(--tab-radius) 0px 0px !important;
+  margin-top: 0.5px !important;
+  padding-bottom: 4px !important;
+}
+
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header ::after {
+  display: none !important;
+}
+
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header:hover .workspace-tab-header-inner {
+  background-color: var(--background-modifier-hover) !important;
+}
+
+/* --- Safari-style Tabs (Vanilla) --- */
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root {
+  --tab-background-inactive: var(--background-secondary-alt);
+  --tab-background-active: var(--background-primary);
+  --tab-background-inactive-hover: var(--background-primary-secondary);
+  --tab-text-color: var(--text-faint);
+  --tab-text-color-active: var(--text-muted);
+  --tab-text-color-focused: var(--text-muted);
+  --tab-text-color-focused-active: var(--text-muted);
+  --tab-text-color-focused-highlighted: var(--text-accent);
+  --tab-text-color-focused-active-current: var(--text-accent);
+  --tab-divider-color: var(--background-modifier-border-hover);
+  --tab-width: 200px;
+  --tab-max-width: 320px;
+}
+
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner {
+  margin: 5px 0 !important;
+  gap: var(--anp-safari-tab-gap, 10px) !important;
+}
+
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header:not(.is-active) {
+  --icon-color: var(--text-muted) !important;
+  --icon-color-hover: var(--text-muted) !important;
+}
+
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header .workspace-tab-header-inner .workspace-tab-header-inner-title {
+  margin-top: 3px !important;
+}
+
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header::before,
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header::after {
+  display: none !important;
+}
+
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header {
+  border-radius: var(--anp-safari-tab-radius, 5px) !important;
+  border: var(--anp-safari-border-width, 1px) solid var(--tab-outline-color) !important;
+  background-color: var(--tab-background-inactive) !important;
+  color: var(--text-muted) !important;
+  max-width: var(--tab-max-width) !important;
+}
+
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active {
+  background-color: var(--tab-background-active) !important;
+  max-width: var(--tab-max-width) !important;
+  box-shadow: none !important;
+}
+
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+  background-color: transparent !important;
+}
+
+.anp-safari-tab-toggle:not(.anp-disable-newtab-align) .workspace-tab-header-container-inner {
+  width: 100% !important;
+}
+
+/* --- Safari-style Tabs (Animated) --- */
+.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked),
+.anp-safari-tab-toggle .workspace-tabs:not(.mod-stacked) {
+  --tab-background: var(--background-secondary);
+  --tab-background-active: var(--background-primary);
+  --tab-font-size: 12px;
+  --tab-height: calc(var(--header-height) * 0.7);
+  --tab-max-width: 200px;
+  --tab-max-width-active: 300px;
+}
+
+.anp-alternate-tab-toggle .workspace-ribbon.mod-left {
+  margin-top: var(--header-height) !important;
+}
+
+.anp-alternate-tab-toggle .workspace-ribbon.mod-left:before {
+  padding-bottom: 0px !important;
+}
+
+.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked) .workspace-tab-header::before,
+.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked) .workspace-tab-header::after,
+.anp-alternate-tab-toggle .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner::after {
+  display: none !important;
+}
+
+.anp-alternate-tab-toggle .mod-vertical:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner,
+.anp-alternate-tab-toggle .mod-horizontal:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
+  align-items: center !important;
+  justify-content: var(--anp-safari-tab-align, center) !important;
+  margin: 0 !important;
+  width: 100% !important;
+  gap: var(--anp-safari-tab-gap, 10px) !important;
+}
+
+.anp-disable-newtab-align.anp-alternate-tab-toggle .mod-vertical:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner,
+.anp-disable-newtab-align.anp-alternate-tab-toggle .mod-horizontal:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
+  width: unset !important;
+  gap: var(--anp-safari-tab-gap, 10px) !important;
+}
+
+.anp-alternate-tab-toggle .mod-vertical:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header,
+.anp-alternate-tab-toggle .mod-horizontal:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+  background: var(--tab-background) !important;
+  border-radius: var(--anp-safari-tab-radius, 6px) !important;
+  box-shadow: none !important;
+  height: var(--tab-height) !important;
+  padding: 0 !important;
+  transition: 400ms, background-color 150ms ease-in-out !important;
+}
+
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+  max-width: var(--tab-max-width) !important;
+  border: var(--anp-safari-border-width, 1px) solid var(--tab-outline-color) !important;
+}
+
+.anp-alternate-tab-toggle.anp-alt-tab-anim-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+  transition: 400ms, background-color 150ms ease-in-out !important;
+}
+
+.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked) .workspace-tab-header:first-child {
+  margin-left: 0 !important;
+}
+
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
+  padding: 7px 8px !important;
+}
+
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
+  padding: 0 4px 0 8px !important;
+  transition: 400ms, background-color 150ms ease-in-out, max-width 400ms !important;
+}
+
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner,
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-close-button,
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-icon {
+  color: var(--text-muted) !important;
+}
+
+.anp-alternate-tab-toggle .workspace .mod-root .workspace-tab-header-inner::after {
+  display: none !important;
+}
+
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
+  flex-grow: 1.67 !important;
+  max-width: var(--tab-max-width-active) !important;
+  background-color: var(--background-primary) !important;
+}
+
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: var(--color-accent) !important;
+}
+
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-close-button,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+  color: var(--text-faint) !important;
+}
+
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
+  background-color: rgba(var(--rp-highlightLow), 0.4) !important;
+}
+
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-close-button,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+  color: var(--color-accent) !important;
+}
+
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:hover {
+  background-color: var(--background-modifier-border) !important;
+}
+
+.anp-alternate-tab-toggle .sidebar-toggle-button.mod-left,
+.anp-alternate-tab-toggle .sidebar-toggle-button.mod-right {
+  align-items: center !important;
+}
+
+.anp-alternate-tab-toggle .sidebar-toggle-button.mod-left .clickable-icon,
+.anp-alternate-tab-toggle .sidebar-toggle-button.mod-right .clickable-icon {
+  height: var(--tab-height) !important;
+}
+
+.is-focused:not(.anp-mini-tab-toggle.anp-colorful-frame) .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: var(--color-accent) !important;
+}
+
+.anp-alternate-tab-toggle.anp-safari-tab-animated .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active {
+  flex-grow: 1.67 !important;
+  max-width: var(--tab-max-width-active) !important;
+  transition: max-width 400ms ease-in-out, width 400ms ease-in-out, flex-grow 400ms ease, background-color 150ms !important;
+}
+
+/* --- Depth Tabs --- */
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header {
+  --tab-text-color-focused-active-current: rgb(var(--anp-depth-tab-text, var(--rp-text)));
+  --tab-text-color-focused: rgb(var(--anp-depth-tab-text, var(--rp-text)));
+}
+
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active) {
+  --tab-text-color: var(--anp-depth-tab-text) !important;
+  --icon-color: var(--anp-depth-tab-text) !important;
+  --icon-color-hover: var(--anp-depth-tab-text) !important;
+  background-color: color-mix(in srgb, var(--rp-base) calc(var(--anp-depth-tab-opacity, 0.6) * 100%), transparent) !important;
+}
+
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active)::before,
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active)::after {
+  box-shadow: inset 0 0 0 var(--tab-outline-width) transparent, 0 0 0 calc(var(--tab-curve) * 4) color-mix(in srgb, var(--rp-base) calc(var(--anp-depth-tab-opacity, 0.6) * 100%), transparent) !important;
+}
+
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active)::after {
+  clip-path: inset(50% 50% 0 calc(var(--tab-curve) * 0)) !important;
+}
+
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active)::before {
+  clip-path: inset(50% calc(var(--tab-curve) * 0) 0 50%) !important;
+}
+
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header-inner::after {
+  display: none !important;
+}
+
+.anp-depth-tab-toggle .workspace-tab-header-container-inner {
+  gap: var(--anp-depth-tab-gap, 10px) !important;
+}
+
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+  background-color: transparent !important;
+}
+
+.anp-depth-tab-toggle .workspace-tab-header-inner-close-button:hover {
+  background-color: var(--background-modifier-hover) !important;
+}
+
+.anp-depth-tab-toggle.anp-depth-tab-text-invert {
+  --anp-depth-tab-text: var(--rp-base) !important;
+}
+
+/* =========================================================================
+   workspace-translucency.css
+   Translucent window styling overrides from AnuPpuccin
+   ========================================================================= */
+body.is-translucent {
+  background-color: transparent !important;
+  --workspace-background-translucent: color-mix(in srgb, var(--rp-base) calc(var(--anp-translucency-opacity, 0.15) * 100%), transparent) !important;
+}
+
+.is-translucent:not(.is-fullscreen) {
+  --nav-collapse-icon-color: rgba(128, 128, 128, 0.3) !important;
+  --nav-collapse-icon-color-collapsed: rgba(128, 128, 128, 0.3) !important;
+  --divider-color: rgba(var(--rp-highlightMed), 0.15) !important;
+}
+
+.is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left,
+.is-translucent:not(.is-fullscreen) .workspace-tabs,
+.is-translucent:not(.is-fullscreen) .mod-left-split .workspace-tab-header-container,
+.is-translucent:not(.is-fullscreen) .mod-right-split .workspace-tab-header-container,
+.is-translucent:not(.is-fullscreen) .mod-top .workspace-tab-header-container,
+.is-translucent:not(.is-fullscreen) .workspace-tabs .workspace-leaf,
+.is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left:before,
+.is-translucent:not(.is-fullscreen) .workspace-split.mod-root,
+.is-translucent:not(.is-fullscreen) .workspace-split.mod-root.mod-left-split .view-content,
+.is-translucent:not(.is-fullscreen) .view-header,
+.is-translucent:not(.is-fullscreen) .horizontal-main-container {
+  background-color: transparent !important;
+}
+
+.is-translucent:not(.is-fullscreen) .view-header-title-container:not(.mod-at-end):after {
+  background-image: none !important;
+}
+
+.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .workspace-tab-header,
+.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .view-header {
+  background-color: var(--background-primary) !important;
+}
+
+.is-translucent .workspace {
+  background-color: transparent !important;
+}
+
+.is-translucent .workspace-split.mod-left-split.is-sidedock-collapsed .workspace-tabs,
+.is-translucent .workspace-split.mod-right-split.is-sidedock-collapsed .workspace-tabs {
+  visibility: hidden !important;
 }

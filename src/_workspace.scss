@@ -1,0 +1,737 @@
+// =========================================================================
+// _workspace.scss
+// Core workspace UI: buttons, splits, status bar, view headers,
+// code blocks, links, checkboxes, graph view, toggles, etc.
+// Ported from src_css_deprecated/theme.css
+// =========================================================================
+
+// --- Buttons ---
+button {
+  font-family: var(--font-family-accent);
+  font-style: italic;
+  background-color: var(--rp-overlay);
+  color: var(--rp-foam);
+}
+
+// --- Resize Handles ---
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  width: 1px !important;
+  background-color: var(--border-color);
+}
+
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+  height: 1px !important;
+  background-color: var(--border-color);
+}
+
+// --- Ribbon ---
+.workspace-ribbon.is-collapsed {
+  background-color: var(--background-primary-alt);
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+  border-right: 1px solid var(--border-color);
+}
+
+.workspace-ribbon.mod-right.is-collapsed {
+  border-left: 1px solid var(--border-color);
+}
+
+// --- Workspace Splits ---
+.workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content,
+.workspace-split.mod-vertical > .workspace-split,
+.workspace-split.mod-vertical > .workspace-leaf,
+.workspace-tabs {
+  padding-right: 0px;
+}
+
+// --- Status Bar ---
+.status-bar {
+  font-size: var(--font-size-status-bar);
+  background-color: var(--background-secondary-alt);
+  border-top: 0px;
+}
+
+// --- Search ---
+.document-search-container {
+  border-top: 0px;
+  border-right: 0px;
+  z-index: inherit;
+}
+
+// --- Tags ---
+a.tag:hover {
+  color: var(--text-accent) !important;
+}
+
+.cm-hashtag,
+a.tag {
+  color: var(--text-accent-hover) !important;
+  font-style: normal !important;
+}
+
+// --- Strings ---
+.cm-s-obsidian span.cm-string {
+  color: var(--text-accent-hover) !important;
+}
+
+a:not(.internal-link) {
+  font-style: italic;
+}
+
+// --- Footnotes ---
+.cm-s-obsidian pre.HyperMD-footnote span.cm-hmd-footnote,
+.cm-s-obsidian span.cm-footref {
+  color: var(--text-accent) !important;
+}
+
+// --- Vim Cursor ---
+.cm-fat-cursor {
+  background-color: var(--text-selection) !important;
+  color: var(--rp-accent) !important;
+  opacity: 0.5 !important;
+}
+
+.cm-animate-fat-cursor {
+  background-color: var(--text-selection) !important;
+  color: var(--rp-accent) !important;
+  opacity: 0.5 !important;
+}
+
+// --- App Container ---
+.app-container {
+  font-family: var(--font-family-accent) !important;
+}
+
+::selection {
+  background-color: var(--text-selection);
+}
+
+// --- Editor / Preview Fonts ---
+.cm-s-obsidian,
+.mod-single-child .cm-s-obsidian {
+  font-family: var(--font-family-editor) !important;
+  font-size: var(--font-size-normal);
+}
+
+.markdown-preview-view,
+.mod-single-child .markdown-preview-view {
+  font-family: var(--font-family-preview) !important;
+  font-size: var(--font-size-normal);
+  padding-top: 0px;
+  padding-left: 2% !important;
+  padding-right: 1% !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-scroller {
+  font-family: var(--font-family-editor) !important;
+  font-size: var(--font-size-normal);
+}
+
+// --- Bold Text Gradient ---
+.cm-strong:not(.cm-formatting-strong),
+strong {
+  font-weight: var(--bold-weight, bold) !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0 0.1rem;
+  color: var(--rp-love);
+  background-color: var(--rp-love);
+  background-image: linear-gradient(62deg, var(--rp-love) 0%, var(--rp-iris) 100%) !important;
+}
+
+strong .math.math-inline .MathJax {
+  position: inherit !important;
+}
+
+.cm-strong::selection,
+strong::selection {
+  -webkit-text-fill-color: var(--rp-love);
+}
+
+.cm-formatting.cm-formatting-strong.cm-strong,
+.cm-formatting.cm-formatting-em.cm-em {
+  color: var(--text-faint) !important;
+  opacity: 0.25;
+}
+
+.cm-strong kbd,
+strong kbd {
+  -webkit-text-fill-color: initial;
+}
+
+.cm-strong span.cm-inline-code,
+strong code {
+  -webkit-text-fill-color: var(--rp-love) !important;
+  color: var(--rp-love) !important;
+  font-weight: bold !important;
+}
+
+.cm-strong span.cm-inline-code::selection,
+strong code::selection {
+  -webkit-text-fill-color: inherit !important;
+}
+
+// --- List Formatting ---
+.cm-s-obsidian span.cm-formatting-list {
+  color: var(--text-normal) !important;
+}
+
+// --- Horizontal Rule ---
+.markdown-preview-view hr {
+  border-top: none !important;
+  border-color: none !important;
+}
+
+// --- Code Blocks (Preview) ---
+pre code {
+  font-family: var(--font-family-code) !important;
+  font-size: 14 !important;
+  padding: 6px !important;
+  line-height: normal;
+  display: block;
+  color: var(--code-block) !important;
+}
+
+.markdown-preview-view pre {
+  padding: 0px !important;
+}
+
+.theme-dark code[class*="language-"],
+.theme-dark pre[class*="language-"],
+.theme-light code[class*="language-"],
+.theme-light pre[class*="language-"] {
+  text-shadow: none !important;
+  color: var(--text-faint) !important;
+  background-color: var(--code-background);
+}
+
+.cm-s-obsidian span.cm-formatting-link {
+  color: var(--text-accent) !important;
+}
+
+.cm-quote {
+  color: var(--text-normal) !important;
+  font-style: italic;
+}
+
+// --- Tables ---
+th {
+  font-weight: 800 !important;
+}
+
+.markdown-preview-view th {
+  font-weight: 800;
+  background-color: var(--background-secondary) !important;
+}
+
+thead {
+  border-bottom: 3px solid var(--background-modifier-border);
+}
+
+// --- Modal ---
+.modal {
+  border: none;
+}
+
+.table {
+  padding: 4px;
+  line-height: normal;
+  display: block;
+  border-radius: 4px;
+}
+
+// --- Checkboxes (Preview) ---
+.markdown-preview-view .task-list-item-checkbox {
+  -webkit-appearance: none;
+  top: 0.2em !important;
+  right: 4px;
+  box-sizing: border-box;
+  border: 1px solid var(--text-muted);
+  position: relative;
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0;
+  box-shadow: 0 0 0.1em var(--text-muted);
+
+  &:checked::before {
+    content: '✓';
+    position: absolute;
+    color: var(--text-accent);
+    font-size: 1em;
+    line-height: 1.25em;
+    width: 1.2em;
+    text-align: center;
+    text-shadow: 0 0 0.1em var(--text-accent);
+  }
+}
+
+// --- Settings Checkbox ---
+.checkbox-container {
+  background-color: var(--background-primary);
+
+  &.is-enabled {
+    background-color: var(--rp-accent);
+  }
+}
+
+// --- Popover ---
+.popover {
+  border: 1px solid var(--border-color);
+  background-color: var(--background-secondary);
+}
+
+// --- Search Results ---
+.search-result-file-title {
+  font-size: 15px;
+}
+
+.search-result-file-matches,
+.search-empty-state {
+  font-size: var(--font-size-side-dock);
+}
+
+.search-result-file-title,
+.search-result-file-match {
+  padding: 0px 10px;
+}
+
+// --- Nav Files ---
+.nav-file-title,
+.nav-folder-title {
+  border-radius: 0 !important;
+}
+
+// --- Sidebar Leaf Content ---
+.workspace-leaf-content[data-type="backlink"] .view-content {
+  background-color: var(--background-secondary);
+}
+
+.workspace-leaf-content[data-type="tag"] {
+  .tag-pane-tag-count,
+  .tag-pane-tag-text {
+    font-size: var(--font-size-side-dock);
+  }
+}
+
+.workspace-leaf-content[data-type="backlink"] .search-result-file-matches {
+  font-size: var(--font-size-side-dock);
+}
+
+// --- Embeds ---
+.markdown-embed-title {
+  display: none;
+}
+
+.markdown-preview-view {
+  .markdown-embed-content > :first-child {
+    margin-top: 0;
+  }
+
+  .markdown-embed-content > :last-child {
+    margin-bottom: 0;
+  }
+
+  .markdown-embed {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .markdown-embed-content {
+    max-height: unset;
+    background-color: var(--background-secondary);
+  }
+}
+
+.markdown-embed-link {
+  color: var(--text-faint) !important;
+
+  &:hover {
+    color: var(--text-accent) !important;
+  }
+}
+
+// --- Graph View ---
+.graph-view {
+  &.color-circle,
+  &.color-fill-highlight,
+  &.color-line-highlight {
+    color: var(--text-accent) !important;
+  }
+
+  &.color-text {
+    color: var(--text-normal) !important;
+  }
+
+  &.color-line {
+    color: var(--rp-highlightHigh);
+  }
+
+  &.color-fill {
+    color: var(--rp-iris) !important;
+  }
+
+  &.color-arrow {
+    color: var(--rp-pine);
+  }
+
+  &.color-fill-tag {
+    color: var(--rp-foam) !important;
+  }
+
+  &.color-fill-attachment {
+    color: var(--rp-gold) !important;
+  }
+
+  &.color-fill-unresolved {
+    color: var(--rp-rose) !important;
+  }
+}
+
+.workspace-leaf-content[data-type="graph"] .view-content {
+  background-color: var(--background-primary);
+}
+
+// --- Settings ---
+.modal.mod-settings button:not(.mod-cta):hover {
+  background-color: var(--interactive-accent-hover);
+}
+
+// --- Readable Line Width ---
+.markdown-source-view.is-readable-line-width .CodeMirror {
+  max-width: var(--file-line-width, 900px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-section {
+  max-width: var(--file-line-width, 900px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+// --- View Header ---
+.view-header {
+  background-color: var(--background-primary) !important;
+  border-top: 1px solid var(--border-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+// Calendar plugin
+.day.svelte-q3wqg9:active,
+.active.svelte-q3wqg9,
+.active.today.svelte-q3wqg9 {
+  background-color: var(--rp-highlightHigh);
+  color: var(--rp-foam);
+}
+
+.view-header-title-container:after {
+  background: linear-gradient(to bottom, transparent, var(--background-primary)) !important;
+}
+
+// --- Active Leaf ---
+.workspace-leaf.mod-active {
+  .view-header {
+    background-color: var(--background-primary) !important;
+    border-top: 0px !important;
+    border-bottom: 3px solid var(--interactive-accent) !important;
+  }
+
+  .view-header-title-container:after {
+    background: linear-gradient(to bottom, transparent, var(--background-secondary-alt)) !important;
+  }
+
+  .view-header-title,
+  .view-header-icon {
+    color: var(--background-modifier-border);
+  }
+}
+
+.view-header-title,
+.view-header-icon,
+.view-action {
+  color: var(--text-faint);
+}
+
+// --- Nested Lists ---
+ul ul {
+  position: relative;
+
+  &::before {
+    content: '';
+    border-left: 1px solid var(--border-color);
+    position: absolute;
+    left: -1em;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+ul .task-list-item ul::before {
+  left: 0.15em !important;
+}
+
+// --- Inline Code (Editor) ---
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code,
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code) {
+  background-color: var(--code-background);
+  color: var(--inline-code) !important;
+  bottom: 0px !important;
+}
+
+// --- Editor Code Blocks ---
+.cm-s-obsidian pre.HyperMD-codeblock {
+  font-family: var(--font-family-code) !important;
+  font-size: var(--font-size-code) !important;
+  padding: 1px !important;
+  display: block;
+  color: var(--code-block) !important;
+  font-weight: 500;
+  text-indent: 0px !important;
+}
+
+.HyperMD-codeblock-bg {
+  border: 0px !important;
+}
+
+// Vim active line
+.cm-fat-cursor .CodeMirror-activeline .CodeMirror-linebackground {
+  background-color: var(--text-selection) !important;
+}
+
+code {
+  color: var(--inline-code) !important;
+  bottom: 0px !important;
+}
+
+// --- Search Collapse ---
+.search-result-collapse-indicator {
+  position: absolute;
+  left: 0;
+  top: -3px;
+  color: var(--text-faint);
+  transition: transform 100ms ease-in-out;
+  padding: 0px !important;
+}
+
+// --- Emphasis ---
+em,
+.cm-em {
+  font-family: var(--font-family-accent);
+  font-style: italic;
+  color: var(--text-accent);
+}
+
+// --- Links ---
+.cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-hmd-internal-link {
+  color: var(--text-normal);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 5px 5px;
+}
+
+.cm-s-obsidian span.cm-formatting-link {
+  color: var(--rp-love) !important;
+  opacity: 0.25;
+}
+
+.external-link {
+  padding: 0;
+  -webkit-text-fill-color: var(--rp-pine);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 5px 5px;
+  transition: all 350ms ease;
+  background-image: linear-gradient(to bottom, var(--bg-sub-accent-55) 0%, var(--bg-sub-accent-55) 100%);
+
+  &:hover {
+    -webkit-text-fill-color: var(--text-sub-accent);
+    background-size: 4px 50px;
+  }
+}
+
+.internal-link {
+  -webkit-text-fill-color: var(--rp-foam);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 5px 5px;
+  transition: all 350ms ease;
+  background-image: linear-gradient(to bottom, var(--bg-accent-55) 0%, var(--bg-accent-55) 100%);
+
+  &:hover {
+    -webkit-text-fill-color: var(--text-accent);
+    background-size: 4px 50px;
+  }
+}
+
+a,
+.internal-link,
+.cm-hmd-internal-link,
+.cm-link {
+  color: var(--text-sub-accent);
+}
+
+.cm-url {
+  color: var(--text-faint) !important;
+  opacity: 0.4;
+  font-weight: normal;
+}
+
+.cm-formatting-image {
+  color: var(--text-accent) !important;
+  opacity: 0.7;
+}
+
+a:hover,
+.internal-link:hover {
+  color: var(--text-accent);
+}
+
+.cm-formatting-list {
+  color: var(--list) !important;
+}
+
+.cm-formatting-quote {
+  color: var(--quote-opening-modifier) !important;
+}
+
+// --- Checkboxes (Editor) ---
+input[type=checkbox],
+.markdown-preview-view .cm-formatting-task {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid var(--text-faint);
+  padding: 0;
+  vertical-align: middle;
+}
+
+.markdown-preview-view .cm-s-obsidian span.cm-formatting-task {
+  width: 1em !important;
+  height: 1em;
+  display: inline-block;
+}
+
+input[type=checkbox]:focus {
+  outline: 0;
+}
+
+input[type=checkbox]:checked,
+.cm-formatting-task.cm-property {
+  background-color: var(--text-accent-hover);
+  border: 1px solid var(--text-accent-hover);
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
+}
+
+// --- Horizontal Rule (Rainbow Gradient) ---
+hr {
+  border: 0;
+  height: 0.35rem;
+  margin: 3em auto;
+  display: block;
+  background-image: -webkit-linear-gradient(
+    0deg,
+    transparent,
+    var(--rp-gold),
+    var(--rp-love),
+    var(--rp-rose),
+    var(--rp-iris),
+    var(--rp-foam),
+    transparent
+  );
+  clear: both;
+}
+
+// --- Body ---
+body {
+  background: var(--rp-base);
+  color: var(--rp-text);
+}
+
+// --- Show/Hide UI Element Toggles ---
+.rp-toggle-scrollbars *::-webkit-scrollbar {
+  display: none !important;
+}
+
+.rp-hide-status-bar .status-bar {
+  display: none !important;
+}
+
+.rp-tooltip-toggle .tooltip {
+  display: none !important;
+}
+
+.rp-hide-external-link-icon {
+  .external-link-icon,
+  .external-link::after {
+    display: none !important;
+  }
+
+  .external-link {
+    background-image: none !important;
+    padding-right: 0px !important;
+  }
+}
+
+.rp-toggle-metadata {
+  .frontmatter-container,
+  .metadata-container {
+    display: none !important;
+  }
+}
+
+// --- Autohide View Header (Pane Title Bar) ---
+.rp-autohide-titlebar:not(.is-mobile) {
+  --title-bar-delay: 150ms;
+  --title-bar-duration: 300ms;
+  --title-bar-target-translate-y: 18px;
+  --title-bar-translate-y: 40px;
+
+  .workspace-leaf-content .view-header {
+    margin-top: calc(var(--title-bar-translate-y) * -1);
+    position: relative;
+    transition: transform var(--title-bar-duration) var(--title-bar-delay);
+
+    &::before {
+      bottom: calc(var(--title-bar-target-translate-y) * -1);
+      content: "";
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: transform var(--title-bar-duration) var(--title-bar-delay);
+      width: 100%;
+      z-index: 0;
+    }
+
+    &:is(:hover, :focus-within)::before {
+      transform: translateY(var(--title-bar-target-translate-y));
+    }
+
+    &:is(:hover, :focus-within),
+    &:is(:hover, :focus-within) + .view-content {
+      transform: translateY(var(--title-bar-translate-y));
+    }
+
+    > div {
+      transition: visibility var(--title-bar-duration) var(--title-bar-delay);
+      visibility: visible;
+      z-index: 1;
+    }
+
+    &:not(:hover, :focus-within) > div {
+      visibility: hidden;
+    }
+  }
+
+  .workspace-leaf-content .view-content {
+    transition: transform var(--title-bar-duration) var(--title-bar-delay);
+  }
+}

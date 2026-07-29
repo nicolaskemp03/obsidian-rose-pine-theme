@@ -9,18 +9,20 @@
 @use 'themes';
 @use 'images';
 
-// --- Core (to be ported) ---
-// @use 'text';
-// @use 'text-modifiers';
-// @use 'workspace';
-// @use 'style-settings';
+// --- Core ---
+@use 'text';
+@use 'text-modifiers';
+@use 'workspace';
 
-// --- Modules (to be ported) ---
-// @use 'modules/layout-margins';
-// @use 'modules/markdown-elements';
-// @use 'modules/style-settings-gui';
-// @use 'modules/workspace-canvas';
-// @use 'modules/workspace-layouts';
-// @use 'modules/workspace-statusbar';
-// @use 'modules/workspace-tabs';
-// @use 'modules/workspace-translucency';
+// --- Style Settings ---
+@use 'style-settings';
+
+// --- Modules ---
+@use 'modules/layout-margins';
+@use 'modules/markdown-elements';
+@use 'modules/style-settings-gui';
+@use 'modules/workspace-canvas';
+@use 'modules/workspace-layouts';
+@use 'modules/workspace-statusbar';
+@use 'modules/workspace-tabs';
+@use 'modules/workspace-translucency';

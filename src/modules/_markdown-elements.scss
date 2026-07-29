@@ -1,0 +1,144 @@
+/* =========================================================================
+   markdown-elements.css
+   Style overrides for callouts, code blocks, lists, tables, tags, and embeds
+   ========================================================================= */
+
+/* --- Callouts --- */
+.callout {
+  border-radius: var(--callout-radius, 8px) !important;
+  padding: var(--callout-padding, 8px 12px) !important;
+}
+
+.callout-title {
+  padding: var(--callout-title-padding, 8px 12px) !important;
+}
+
+.callout-content {
+  padding: var(--callout-content-padding, 12px 16px) !important;
+}
+
+/* Sleek Callout Style */
+.rp-callout-sleek .callout {
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--background-secondary-alt) !important;
+  border-left: 4px solid rgb(var(--callout-color)) !important;
+  box-shadow: none !important;
+}
+
+.rp-callout-sleek .callout-title {
+  background-color: rgba(var(--callout-color), 0.08) !important;
+}
+
+.rp-callout-sleek .callout-content {
+  border-top: 1px dashed rgba(var(--callout-color), 0.2) !important;
+}
+
+/* Vanilla Callout Style */
+.rp-callout-vanilla .callout {
+  background-color: transparent !important;
+  border: 1px solid var(--border-color) !important;
+  border-left: 4px solid rgb(var(--callout-color)) !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.rp-callout-vanilla .callout-title {
+  background-color: rgba(var(--callout-color), 0.08) !important;
+  padding: var(--callout-title-padding, 8px 12px) !important;
+}
+
+.rp-callout-vanilla .callout-content {
+  background-color: var(--background-primary) !important;
+  padding: var(--callout-content-padding, 12px 16px) !important;
+}
+
+
+/* --- Checkboxes --- */
+/* Custom Checkboxes: Clean modern checkmark styling */
+.rp-custom-checkboxes .markdown-rendered .task-list-item-checkbox,
+.rp-custom-checkboxes .task-list-item-checkbox {
+  border-radius: 4px !important;
+  width: 1.2em !important;
+  height: 1.25em !important;
+  border: 1.5px solid var(--text-muted) !important;
+  transition: all 0.2s ease !important;
+  box-shadow: none !important;
+  top: 0.15em !important;
+}
+
+.rp-custom-checkboxes .markdown-rendered .task-list-item-checkbox:checked,
+.rp-custom-checkboxes .task-list-item-checkbox:checked {
+  background-color: var(--rp-accent) !important;
+  border-color: var(--rp-accent) !important;
+  background-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>') !important;
+}
+
+
+/* --- Codeblocks --- */
+/* Prevent wrapping inside edit mode (adds horizontal scroll) */
+.rp-codeblock-edit-nowrap .HyperMD-codeblock {
+  white-space: pre !important;
+  word-break: normal !important;
+  overflow-x: auto !important;
+}
+
+/* Prevent wrapping inside reading mode (adds horizontal scroll) */
+.rp-codeblock-preview-nowrap .markdown-preview-view pre code {
+  white-space: pre !important;
+  word-break: normal !important;
+  overflow-x: auto !important;
+}
+
+
+/* --- Embeds & Media --- */
+.markdown-rendered img,
+.markdown-rendered video,
+.markdown-rendered iframe {
+  border-radius: var(--embed-corner-radius, 8px) !important;
+}
+
+
+/* --- Lists --- */
+.markdown-rendered ul,
+.markdown-rendered ol {
+  padding-inline-start: var(--list-indent, 1.5em) !important;
+}
+
+.markdown-rendered li {
+  padding-top: var(--list-spacing, 0.1em) !important;
+  padding-bottom: var(--list-spacing, 0.1em) !important;
+}
+
+/* Custom list bullet colors */
+.rp-list-bullet-color-toggle ul > li::marker,
+.rp-list-bullet-color-toggle .cm-formatting-list {
+  color: var(--list-bullet-color, var(--rp-iris)) !important;
+}
+
+
+/* --- Tables --- */
+/* Zebra Striping */
+.rp-table-zebra tr:nth-child(even) {
+  background-color: var(--background-secondary-alt) !important;
+}
+
+/* Custom Table Width */
+.rp-table-width .markdown-rendered table {
+  width: var(--table-width-pct, 100%) !important;
+  max-width: var(--table-width-pct, 100%) !important;
+}
+
+/* Center Tables */
+.rp-table-center .markdown-rendered table {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+/* --- Tags --- */
+.tag, a.tag {
+  border-width: var(--tag-border-width, 0px) !important;
+  border-style: solid !important;
+  border-color: var(--border-color) !important;
+  border-radius: var(--tag-radius, 4px) !important;
+}

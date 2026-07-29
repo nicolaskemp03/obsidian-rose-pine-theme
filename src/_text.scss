@@ -1,0 +1,59 @@
+// =========================================================================
+// _text.scss
+// Blockquotes, headings, code blocks, and text formatting
+// =========================================================================
+
+// --- Blockquotes ---
+.body {
+  --blockquote-background-color: var(--code-background);
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  background-color: var(--code-background);
+  border: 0px solid;
+  border-color: var(--blockquote-border) !important;
+  border-left-width: 4px !important;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.5em;
+  margin: 30px 0px;
+  font-style: italic;
+}
+
+.markdown-preview-view blockquote {
+  background-color: var(--code-background);
+  border: 0px solid;
+  border-color: var(--blockquote-border) !important;
+  border-left-width: 4px !important;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.5em;
+  margin: 30px 0px;
+  font-style: italic;
+}
+
+.markdown-preview-view code {
+  font-size: var(--font-size-code);
+}
+
+// --- Headings ---
+@for $i from 1 through 6 {
+  .cm-header-#{$i},
+  .markdown-preview-view h#{$i} {
+    font-family: var(--heading-font, var(--font-family-editor)) !important;
+    font-weight: var(--font-weight-h#{$i}, 500) !important;
+    font-size: var(--font-size-h#{$i}) !important;
+    color: var(--rp-h#{$i}) !important;
+  }
+}
+
+// --- Heading Dividers ---
+.h1-divider .markdown-preview-view h1,
+.h1-divider .cm-header-1 {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.25em;
+}
+
+.h2-divider .markdown-preview-view h2,
+.h2-divider .cm-header-2 {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.2em;
+}
