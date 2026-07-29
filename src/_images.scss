@@ -1,0 +1,41 @@
+// =========================================================================
+// _images.scss
+// Icon colors, image centering, and hover effects
+// =========================================================================
+
+body {
+  --icon-color: var(--rp-text);
+  --icon-color-hover: var(--rp-text);
+  --background-modifier-hover: var(--rp-highlightMed);
+}
+
+.clickable-icon,
+.mod-left-split .workspace-tab-header,
+.mod-right-split .workspace-tab-header {
+  color: var(--icon-color) !important;
+}
+
+.clickable-icon:hover {
+  color: var(--icon-color);
+  background-color: var(--background-modifier-hover);
+}
+
+.clickable-icon:active {
+  color: var(--icon-color);
+  background-color: var(--background-modifier-hover);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img:hover {
+  transform: scale(1.04);
+  transition: transform 0.25s ease-in-out 0s;
+}
+
+.community-theme img:hover {
+  transform: none;
+}

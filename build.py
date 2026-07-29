@@ -1,43 +1,54 @@
-import glob
-import os
-import re
+#!/usr/bin/env python3
+"""
+Build script for the Rosé Pine Obsidian theme.
+
+Compiles src/theme.scss → theme.css using Dart Sass.
+
+Requires: npm install -g sass
+  Or run via npx: npx sass src/theme.scss theme.css --no-source-map
+"""
+
+import subprocess
+import shutil
+import sys
+
+
+def check_sass():
+    """Check if sass is available via global install or npx."""
+    if shutil.which("sass"):
+        return ["sass"]
+    # Fall back to npx
+    if shutil.which("npx"):
+        return ["npx", "-y", "sass"]
+    return None
+
 
 def build():
-    # 1. Get core CSS files directly in src/ (sorted alphabetically)
-    core_files = sorted(glob.glob("src/*.css"))
-    
-    # 2. Get plugin/feature CSS files from subdirectories (sorted alphabetically)
-    plugin_files = []
-    for root, dirs, files in os.walk("src"):
-        # Skip the root src/ folder itself to avoid duplicates
-        if os.path.normpath(root) == os.path.normpath("src"):
-            continue
-        for file in files:
-            if file.endswith(".css"):
-                plugin_files.append(os.path.join(root, file))
-    plugin_files.sort()
-    
-    all_files = core_files + plugin_files
-    print("Found files to compile:")
-    for f in all_files:
-        print(f"  - {f}")
-        
-    out_lines = []
-    for filepath in all_files:
-        with open(filepath, "r", encoding="utf-8") as f:
-            for line in f:
-                # 1. Remove single-line comments: /* ... */
-                processed = re.sub(r'/\*.*?\*/', '', line)
-                # 2. Strip trailing whitespaces
-                processed = processed.rstrip()
-                # 3. If line is not empty, keep it
-                if processed:
-                    out_lines.append(processed)
-                    
-    # Write to root theme.css
-    with open("theme.css", "w", encoding="utf-8") as out:
-        out.write("\n".join(out_lines) + "\n")
+    sass_cmd = check_sass()
+    if sass_cmd is None:
+        print("ERROR: Dart Sass is not installed.")
+        print("Install it with:  npm install -g sass")
+        print("Or ensure npx is available (comes with Node.js).")
+        sys.exit(1)
+
+    cmd = sass_cmd + [
+        "src/theme.scss",
+        "theme.css",
+        "--no-source-map",
+        "--style=expanded",
+    ]
+
+    print(f"Running: {' '.join(cmd)}")
+    result = subprocess.run(cmd, capture_output=True, text=True)
+
+    if result.returncode != 0:
+        print("ERROR: Sass compilation failed!")
+        print(result.stderr)
+        sys.exit(1)
+
+    print(result.stdout, end="")
     print("theme.css successfully compiled!")
+
 
 if __name__ == "__main__":
     build()
