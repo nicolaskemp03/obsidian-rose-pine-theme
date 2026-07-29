@@ -55,3 +55,10 @@
 .style-settings-heading[data-id="anuppuccin-style-settings"] .setting-item-name {
   color: var(--text-accent) !important;
 }
+
+/* Suffix helpers for Layout custom measurements */
+.style-settings-container .setting-item:is([data-id=anp-card-radius], [data-id=anp-card-layout-padding], [data-id=anp-card-header-left-padding], [data-id=anp-border-radius], [data-id=anp-border-padding]) .setting-item-control::after {
+  content: "px" !important;
+  margin-left: 4px !important;
+  color: var(--text-muted) !important;
+}

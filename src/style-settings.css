@@ -994,6 +994,109 @@ settings:
     type: variable-number
     default: 40
     format: px
+  -
+    id: rp-layouts-subheading
+    title: Workspace Layout
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-layout-select
+    title: Workspace Layout Variant
+    type: class-select
+    allowEmpty: false
+    default: none
+    options:
+    -
+      label: Default
+      value: none
+    -
+      label: Border
+      value: anp-border-layout
+    -
+      label: Cards
+      value: anp-card-layout
+  -
+    id: anp-bg-fix
+    title: Background Fix for Colors
+    description: Fixes background coloring issues when applying custom colors to the layouts.
+    type: class-toggle
+    default: false
+  -
+    id: anp-hide-borders
+    title: Hide Borders
+    description: Hides outline borders around tabs and dividers.
+    type: class-toggle
+    default: false
+
+  # Card Layout Settings
+  -
+    id: rp-card-layout-subheading
+    title: Card Layout Settings
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-card-radius
+    title: Card Radius
+    description: Corner radius of workspace cards (Defaults to 16px).
+    type: variable-number
+    default: 16
+    format: px
+  -
+    id: anp-card-layout-padding
+    title: Card Layout Padding
+    description: Outer padding/spacing around workspace cards.
+    type: variable-number
+    default: 10
+    format: px
+  -
+    id: anp-card-header-left-padding
+    title: Tab Left Padding
+    description: Indent padding for tab headers inside the card layout.
+    type: variable-number
+    default: 20
+    format: px
+  -
+    id: anp-card-shadows
+    title: Enable Card Shadows
+    description: Adds a subtle elevation shadow to workspace cards.
+    type: class-toggle
+    default: false
+  -
+    id: anp-card-layout-actions
+    title: Enable Card Format for Actions
+    description: Styles the left ribbon action panel as a card.
+    type: class-toggle
+    default: false
+  -
+    id: anp-card-layout-filebrowser
+    title: Enable Card Format for File Browser
+    description: Styles the file explorer panel as a card.
+    type: class-toggle
+    default: false
+
+  # Border Layout Settings
+  -
+    id: rp-border-layout-subheading
+    title: Border Layout Settings
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-border-radius
+    title: Border Layout Radius
+    description: Corner radius of workspace border segments (Defaults to 16px).
+    type: variable-number
+    default: 16
+    format: px
+  -
+    id: anp-border-padding
+    title: Border Layout Padding
+    description: Outer padding around workspace border segments.
+    type: variable-number
+    default: 20
+    format: px
 */
 
 .rp-accent-rose,
