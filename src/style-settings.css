@@ -924,12 +924,19 @@ settings:
     default: 40
     format: px
   -
-    id: anp-stacked-header-width
-    title: Stacked Tabs Header Width
-    description: Adjust width of stacked tab headers.
-    type: variable-number
-    default: 40
-    format: px
+    id: anp-disable-newtab-align
+    title: Disable New Tab Button Right Alignment
+    description: Keeps the new tab button immediately next to the last tab.
+    type: class-toggle
+    default: false
+
+  # Safari Tab Settings
+  -
+    id: rp-safari-tabs-subheading
+    title: Safari Tab Settings
+    type: heading
+    level: 3
+    collapsed: true
   -
     id: anp-safari-tab-radius
     title: Safari Tab Radius
@@ -951,6 +958,14 @@ settings:
     type: variable-number
     default: 10
     format: px
+
+  # Depth Tab Settings
+  -
+    id: rp-depth-tabs-subheading
+    title: Depth Tab Settings
+    type: heading
+    level: 3
+    collapsed: true
   -
     id: anp-depth-tab-gap
     title: Depth Tab Gap
@@ -964,12 +979,21 @@ settings:
     description: Opacity of inactive tabs in Depth style (0.0 to 1.0).
     type: variable-number
     default: 0.6
+
+  # Stacked Tabs Settings
   -
-    id: anp-disable-newtab-align
-    title: Disable New Tab Button Right Alignment
-    description: Keeps the new tab button immediately next to the last tab.
-    type: class-toggle
-    default: false
+    id: rp-stacked-tabs-subheading
+    title: Stacked Tabs Settings
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-stacked-header-width
+    title: Stacked Tabs Header Width
+    description: Adjust width of stacked tab headers.
+    type: variable-number
+    default: 40
+    format: px
 */
 
 .rp-accent-rose,

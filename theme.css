@@ -954,12 +954,18 @@ settings:
     default: 40
     format: px
   -
-    id: anp-stacked-header-width
-    title: Stacked Tabs Header Width
-    description: Adjust width of stacked tab headers.
-    type: variable-number
-    default: 40
-    format: px
+    id: anp-disable-newtab-align
+    title: Disable New Tab Button Right Alignment
+    description: Keeps the new tab button immediately next to the last tab.
+    type: class-toggle
+    default: false
+  # Safari Tab Settings
+  -
+    id: rp-safari-tabs-subheading
+    title: Safari Tab Settings
+    type: heading
+    level: 3
+    collapsed: true
   -
     id: anp-safari-tab-radius
     title: Safari Tab Radius
@@ -981,6 +987,13 @@ settings:
     type: variable-number
     default: 10
     format: px
+  # Depth Tab Settings
+  -
+    id: rp-depth-tabs-subheading
+    title: Depth Tab Settings
+    type: heading
+    level: 3
+    collapsed: true
   -
     id: anp-depth-tab-gap
     title: Depth Tab Gap
@@ -994,12 +1007,20 @@ settings:
     description: Opacity of inactive tabs in Depth style (0.0 to 1.0).
     type: variable-number
     default: 0.6
+  # Stacked Tabs Settings
   -
-    id: anp-disable-newtab-align
-    title: Disable New Tab Button Right Alignment
-    description: Keeps the new tab button immediately next to the last tab.
-    type: class-toggle
-    default: false
+    id: rp-stacked-tabs-subheading
+    title: Stacked Tabs Settings
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-stacked-header-width
+    title: Stacked Tabs Header Width
+    description: Adjust width of stacked tab headers.
+    type: variable-number
+    default: 40
+    format: px
 */
 .rp-accent-rose,
 .rp-accent-full {
@@ -1951,6 +1972,51 @@ body {
   border-style: solid !important;
   border-color: var(--border-color) !important;
   border-radius: var(--tag-radius, 4px) !important;
+}
+/* =========================================================================
+   style-settings-gui.css
+   Style overrides for the Style Settings plugin settings dashboard UI
+   ========================================================================= */
+.style-settings-container:empty {
+  display: none !important;
+}
+.style-settings-heading[data-level] {
+  padding-top: var(--size-4-2) !important;
+  padding-bottom: var(--size-4-2) !important;
+}
+.style-settings-heading[data-level="0"]:not(.is-collapsed) {
+  margin-bottom: var(--size-4-2) !important;
+}
+.style-settings-heading:not([data-level="0"]) {
+  border-top: 1px solid var(--background-modifier-border) !important;
+  border-bottom: none !important;
+}
+.style-settings-heading:not([data-level="0"], .is-collapsed) {
+  margin-bottom: 0 !important;
+}
+.style-settings-heading:not([data-level="0"]) + .style-settings-container {
+  border: 1px solid var(--background-modifier-border) !important;
+  border-radius: 6px !important;
+  padding: var(--size-4-2) !important;
+  padding-left: var(--size-4-6) !important;
+  background-color: var(--background-secondary-alt) !important;
+  overflow-x: hidden !important;
+  margin-top: 4px !important;
+  margin-bottom: 12px !important;
+}
+.style-settings-heading[data-level="0"]:not(.is-collapsed) + .style-settings-container {
+  border-bottom: 1px solid var(--background-modifier-border) !important;
+}
+.style-settings-heading[data-level="1"] {
+  border-top-color: var(--background-modifier-border) !important;
+}
+.style-settings-heading:not([data-level="0"]):nth-child(-n+2),
+.style-settings-heading:not([data-level="0"], .is-collapsed) + .style-settings-container + .style-settings-heading,
+.style-settings-container .setting-item + .setting-item-heading {
+  border-top-width: 0 !important;
+}
+.style-settings-heading[data-id="anuppuccin-style-settings"] .setting-item-name {
+  color: var(--text-accent) !important;
 }
 /* =========================================================================
    workspace.css (Module: Canvas)
