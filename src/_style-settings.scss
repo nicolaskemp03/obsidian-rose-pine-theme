@@ -1211,6 +1211,230 @@ settings:
     id: anp-rainbow-subfolder-color-toggle
     title: Enable subfolder color inheritance
     type: class-toggle
+# Integrations
+
+  -
+      id: anp-plugin-header
+      title: Integrations
+      description: Kanban, MAKE.md, Minimal Cards Snippet, etc.
+      type: heading
+      level: 1
+      collapsed: true
+
+# Integrations :: Kanban
+
+  -
+      id: anp-plugin-kanban
+      title: Kanban
+      description: 
+      type: heading
+      level: 2
+      collapsed: true
+
+# Integrations :: Kanban :: Card Settings
+
+  -
+      id: anp-plugin-card-settings
+      title: Card Settings
+      description: 
+      type: heading
+      level: 3
+      collapsed: true
+  -
+      id: anp-kanban-hide-card-menus
+      title: Hide the Card Menu Button
+      type: class-toggle
+  -
+      id: anp-kanban-hide-archive-btn
+      title: Hide the Archive Card Button
+      type: class-toggle
+  -
+      id: anp-kanban-hide-card-border
+      title: Disable Card Borders
+      type: class-toggle
+  -
+      id: anp-kanban-card-opacity
+      title: Card Opacity
+      type: variable-number-slider
+      default: 1
+      min: 0
+      max: 1
+      step: 0.05
+  -
+      id: anp-kanban-card-radius
+      title: Card Radius
+      type: variable-number-slider
+      default: 6
+      format: px
+      min: 0
+      max: 10
+      step: 1
+  -
+      id: anp-kanban-card-spacing
+      title: Card Spacing
+      type: variable-number-slider
+      default: 8
+      format: px
+      min: -1
+      max: 8
+      step: 1
+
+# Integrations :: Kanban :: Lane Settings
+
+  -
+      id: anp-plugin-lane-settings
+      title: Lane Settings
+      description: 
+      type: heading
+      level: 3
+      collapsed: true
+  -
+      id: anp-kanban-lanes
+      title: Enable Full Height Lanes
+      description: Toggles maximum height for Kanban lanes
+      type: class-toggle
+  -
+      id: anp-kanban-hide-lane-border
+      title: Disable Lane Borders
+      type: class-toggle
+  -
+      id: anp-kanban-lane-opacity
+      title: Lane Opacity
+      type: variable-number-slider
+      default: 1
+      min: 0
+      max: 1
+      step: 0.05
+  -
+      id: anp-kanban-lane-radius
+      title: Lane Radius
+      type: variable-number-slider
+      default: 6
+      format: px
+      min: 0
+      max: 10
+      step: 1
+  -
+      id: anp-kanban-lane-spacing
+      title: Lane Spacing
+      type: variable-number-slider
+      default: 10
+      format: px
+      min: -1
+      max: 20
+      step: 1
+
+# Integrations :: Kanban :: Search Settings
+
+  -
+      id: anp-plugin-kanban-search-settings
+      title: Search Settings
+      description: 
+      type: heading
+      level: 3
+      collapsed: true
+  -
+      id: anp-kanban-search-full
+      title: Enable Full Width Search Bar
+      description: 
+      type: class-toggle
+  -
+      id: anp-kanban-collapse-lanes
+      title: Collapse Lanes With No Search Results
+      description: 
+      type: class-toggle
+  -
+      id: anp-kanban-hide-cards
+      title: Hide Cards That Don't Contain the Search Query
+      description: 
+      type: class-toggle
+  -
+      id: anp-kanban-hide-mark
+      title: Hide Search Result Highlight in Cards
+      description: 
+      type: class-toggle
+  -
+      id: anp-kanban-uncollapse-lanes
+      title: Uncollapse Lanes and Unhide Cards When Sorting
+      description: 
+      type: class-toggle
+
+# Integrations :: MAKE.md
+
+  -
+      id: anp-plugin-makemd
+      title: MAKE.md
+      description: 
+      type: heading
+      level: 2
+      collapsed: true
+  -
+      id: anp-inline-title-vis
+      title: Inline Title Visibility
+      description: Make.md requires inline titles to be enabled to show folder titles, hence this toggle exists to disable it on notes elsewhere.
+      type: variable-select
+      default: block
+      options:
+      -
+          label: Visible
+          value: block
+      -
+          label: Invisible
+          value: none
+
+# Integrations :: Minimal Cards
+
+  -
+      id: anp-snippet-minimal-cards
+      title: Minimal Cards
+      type: heading
+      level: 2
+      collapsed: true
+  -
+      id: anp-snippet-minimal-cards-disc
+      title: Usage
+      description: "Minimal Cards is a feature of [Minimal](https://github.com/kepano/obsidian-minimal). Rosé Pine does not come compiled with the snippet, however you can use a compiled version with this theme."
+      type: info-text
+      markdown: true
+  -
+      id: rosepine-url-minimal-cards-snippet
+      title: Minimal Cards Snippet
+      description: "Download the snippet from [kepano](https://github.com/kepano/)'s github via [this link](https://github.com/kepano/obsidian-minimal/blob/master/src/scss/features/cards.scss)."
+      type: info-text
+      markdown: true
+  -
+      id: cards-min-width
+      title: Card minimum width
+      type: variable-text
+      default: 180px
+  -
+      id: cards-max-width
+      title: Card maximum width
+      description: Default fills the available width, accepts valid CSS units
+      type: variable-text
+      default: 1fr
+  -
+      id: cards-mobile-width
+      title: Card minimum width on mobile
+      type: variable-text
+      default: 120px
+  -
+      id: cards-padding
+      title: Card padding
+      type: variable-text
+      default: 1.2em
+  -
+      id: cards-image-height
+      title: Card maximum image height
+      type: variable-text
+      default: 400px
+  -
+      id: cards-border-width
+      title: Card border width
+      type: variable-text
+      default: 1px
+
+
 */
 
 .rp-accent-rose,
