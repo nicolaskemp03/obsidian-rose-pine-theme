@@ -866,6 +866,140 @@ settings:
     type: variable-number
     default: 32
     format: px
+  -
+    id: rp-workspace-heading
+    title: Workspace
+    description: Adjust Obsidian's sidebar, status bar, tabs, canvas, and PDF viewer settings
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: rp-canvas-subheading
+    title: Canvas
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: rp-canvas-dark-bg
+    title: Darker Canvas Background
+    description: Darkens the background of the Canvas whiteboard view
+    type: class-toggle
+    default: false
+  -
+    id: rp-translucency-subheading
+    title: Translucency
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-translucency-opacity
+    title: Window Opacity (Translucency)
+    description: Adjust the opacity of the translucent window background (requires "Translucent window" system setting enabled).
+    type: variable-number
+    default: 0.15
+  -
+    id: rp-statusbar-subheading
+    title: Status Bar
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-status-bar-select
+    title: Status Bar Style
+    type: class-select
+    default: none
+    options:
+    -
+      label: Default
+      value: none
+    -
+      label: Floating
+      value: anp-floating-status-bar
+    -
+      label: Fixed
+      value: anp-fixed-status-bar
+  -
+    id: rp-tabs-subheading
+    title: Tabs & Stacked Tabs
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-alt-tab-style
+    title: Tab Style
+    type: class-select
+    allowEmpty: false
+    default: anp-default-tab
+    options:
+    -
+      label: Default
+      value: anp-default-tab
+    -
+      label: Depth
+      value: anp-depth-tab-toggle
+    -
+      label: Minimalistic
+      value: anp-mini-tab-toggle
+    -
+      label: Safari-style (Animated)
+      value: anp-alternate-tab-toggle
+    -
+      label: Safari-style (Vanilla)
+      value: anp-safari-tab-toggle
+  -
+    id: anp-alt-tab-custom-height
+    title: Custom Tab Height
+    description: Adjust height of the tabs bar.
+    type: variable-number
+    default: 40
+    format: px
+  -
+    id: anp-stacked-header-width
+    title: Stacked Tabs Header Width
+    description: Adjust width of stacked tab headers.
+    type: variable-number
+    default: 40
+    format: px
+  -
+    id: anp-safari-tab-radius
+    title: Safari Tab Radius
+    description: Corner radius of Safari-style tabs.
+    type: variable-number
+    default: 6
+    format: px
+  -
+    id: anp-safari-border-width
+    title: Safari Tab Border Width
+    description: Border width of Safari-style tabs.
+    type: variable-number
+    default: 1
+    format: px
+  -
+    id: anp-safari-tab-gap
+    title: Safari Tab Gap
+    description: Spacing between Safari-style tabs.
+    type: variable-number
+    default: 10
+    format: px
+  -
+    id: anp-depth-tab-gap
+    title: Depth Tab Gap
+    description: Spacing between Depth-style tabs.
+    type: variable-number
+    default: 10
+    format: px
+  -
+    id: anp-depth-tab-opacity
+    title: Depth Tab Inactive Opacity
+    description: Opacity of inactive tabs in Depth style (0.0 to 1.0).
+    type: variable-number
+    default: 0.6
+  -
+    id: anp-disable-newtab-align
+    title: Disable New Tab Button Right Alignment
+    description: Keeps the new tab button immediately next to the last tab.
+    type: class-toggle
+    default: false
 */
 .rp-accent-rose,
 .rp-accent-full {
@@ -1817,4 +1951,373 @@ body {
   border-style: solid !important;
   border-color: var(--border-color) !important;
   border-radius: var(--tag-radius, 4px) !important;
+}
+/* =========================================================================
+   workspace.css (Module: Canvas)
+   Canvas styling overrides from AnuPpuccin
+   ========================================================================= */
+.canvas-card-menu {
+  box-shadow: none !important;
+  border: 1px solid var(--background-modifier-border) !important;
+  background-color: var(--background-secondary) !important;
+}
+.canvas-card-menu .canvas-card-menu-button svg {
+  fill: var(--background-secondary) !important;
+}
+.canvas-card-menu .canvas-card-menu-button:hover {
+  color: var(--text-normal) !important;
+}
+.canvas-controls button {
+  background-color: var(--background-secondary) !important;
+}
+.canvas-controls button:hover {
+  filter: brightness(95%) !important;
+}
+.rp-canvas-dark-bg .canvas-wrapper {
+  background-color: var(--background-secondary) !important;
+}
+.rp-canvas-dark-bg .canvas-controls button,
+.rp-canvas-dark-bg .canvas-card-menu {
+  background-color: var(--background-primary) !important;
+}
+.rp-canvas-dark-bg .canvas-card-menu .canvas-card-menu-button svg {
+  fill: var(--background-primary) !important;
+}
+.canvas-selection {
+  background-color: rgba(var(--rp-accent), 0.1) !important;
+  border: 2px solid var(--color-accent) !important;
+}
+.canvas-node.is-themed .canvas-node-label {
+  color: rgb(var(--canvas-color)) !important;
+}
+.canvas-node-placeholder {
+  color: rgb(var(--canvas-color)) !important;
+}
+.canvas-node-placeholder::after {
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+}
+.canvas-placeholder-message {
+  background: rgba(var(--rp-accent), 0.1) !important;
+}
+/* =========================================================================
+   workspace-statusbar.css
+   Status bar styling overrides from AnuPpuccin
+   ========================================================================= */
+.anp-floating-status-bar {
+  --status-bar-position: absolute;
+  --status-bar-radius: 6px;
+  --status-bar-border-width: 1px;
+}
+.anp-floating-status-bar .status-bar {
+  position: absolute !important;
+  transform: translateX(calc(100% - 25px)) !important;
+  transition: transform 300ms 150ms !important;
+  bottom: 8px !important;
+  right: 8px !important;
+  z-index: 999 !important;
+  border-radius: 6px !important;
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--background-secondary) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  height: auto !important;
+  padding: 4px 8px !important;
+}
+.anp-floating-status-bar .status-bar::before {
+  width: 100%;
+  min-height: 100%;
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+}
+.anp-floating-status-bar .status-bar:hover {
+  transform: none !important;
+  transition: transform 300ms 150ms !important;
+}
+.anp-fixed-status-bar .status-bar {
+  position: relative !important;
+  --status-bar-position: relative;
+  --status-bar-radius: 0;
+  border-top: 1px solid var(--border-color) !important;
+}
+/* =========================================================================
+   workspace-tabs.css
+   Tab styles (Default, Depth, Minimalistic, Safari-style) and Stacked Tabs
+   ========================================================================= */
+body {
+  --header-height: var(--anp-alt-tab-custom-height, 40px) !important;
+  --tab-stacked-header-width: var(--anp-stacked-header-width, 40px) !important;
+}
+.workspace-tabs.mod-stacked {
+  --tab-stacked-header-width: var(--anp-stacked-header-width, 40px) !important;
+}
+body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-split.mod-vertical .workspace-tab-header-spacer {
+  display: none !important;
+}
+body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-split.mod-vertical .workspace-tab-header-new-tab {
+  margin-left: auto !important;
+}
+.anp-mini-tab-toggle {
+  --header-height: var(--anp-alt-tab-custom-height, 40px);
+  --tab-stacked-header-width: var(--anp-stacked-header-width, 40px);
+}
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header::before,
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header::after {
+  display: none !important;
+}
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header.is-active {
+  border-bottom: 2px solid var(--color-accent) !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header.is-active .workspace-tab-header-inner {
+  border-radius: var(--tab-radius) var(--tab-radius) 0px 0px !important;
+  margin-top: 0.5px !important;
+  padding-bottom: 4px !important;
+}
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header ::after {
+  display: none !important;
+}
+.anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header:hover .workspace-tab-header-inner {
+  background-color: var(--background-modifier-hover) !important;
+}
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root {
+  --tab-background-inactive: var(--background-secondary-alt);
+  --tab-background-active: var(--background-primary);
+  --tab-background-inactive-hover: var(--background-primary-secondary);
+  --tab-text-color: var(--text-faint);
+  --tab-text-color-active: var(--text-muted);
+  --tab-text-color-focused: var(--text-muted);
+  --tab-text-color-focused-active: var(--text-muted);
+  --tab-text-color-focused-highlighted: var(--text-accent);
+  --tab-text-color-focused-active-current: var(--text-accent);
+  --tab-divider-color: var(--background-modifier-border-hover);
+  --tab-width: 200px;
+  --tab-max-width: 320px;
+}
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner {
+  margin: 5px 0 !important;
+  gap: var(--anp-safari-tab-gap, 10px) !important;
+}
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header:not(.is-active) {
+  --icon-color: var(--text-muted) !important;
+  --icon-color-hover: var(--text-muted) !important;
+}
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header .workspace-tab-header-inner .workspace-tab-header-inner-title {
+  margin-top: 3px !important;
+}
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header::before,
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header::after {
+  display: none !important;
+}
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header {
+  border-radius: var(--anp-safari-tab-radius, 5px) !important;
+  border: var(--anp-safari-border-width, 1px) solid var(--tab-outline-color) !important;
+  background-color: var(--tab-background-inactive) !important;
+  color: var(--text-muted) !important;
+  max-width: var(--tab-max-width) !important;
+}
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active {
+  background-color: var(--tab-background-active) !important;
+  max-width: var(--tab-max-width) !important;
+  box-shadow: none !important;
+}
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+  background-color: transparent !important;
+}
+.anp-safari-tab-toggle:not(.anp-disable-newtab-align) .workspace-tab-header-container-inner {
+  width: 100% !important;
+}
+.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked),
+.anp-safari-tab-toggle .workspace-tabs:not(.mod-stacked) {
+  --tab-background: var(--background-secondary);
+  --tab-background-active: var(--background-primary);
+  --tab-font-size: 12px;
+  --tab-height: calc(var(--header-height) * 0.7);
+  --tab-max-width: 200px;
+  --tab-max-width-active: 300px;
+}
+.anp-alternate-tab-toggle .workspace-ribbon.mod-left {
+  margin-top: var(--header-height) !important;
+}
+.anp-alternate-tab-toggle .workspace-ribbon.mod-left:before {
+  padding-bottom: 0px !important;
+}
+.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked) .workspace-tab-header::before,
+.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked) .workspace-tab-header::after,
+.anp-alternate-tab-toggle .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner::after {
+  display: none !important;
+}
+.anp-alternate-tab-toggle .mod-vertical:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner,
+.anp-alternate-tab-toggle .mod-horizontal:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
+  align-items: center !important;
+  justify-content: var(--anp-safari-tab-align, center) !important;
+  margin: 0 !important;
+  width: 100% !important;
+  gap: var(--anp-safari-tab-gap, 10px) !important;
+}
+.anp-disable-newtab-align.anp-alternate-tab-toggle .mod-vertical:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner,
+.anp-disable-newtab-align.anp-alternate-tab-toggle .mod-horizontal:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
+  width: unset !important;
+  gap: var(--anp-safari-tab-gap, 10px) !important;
+}
+.anp-alternate-tab-toggle .mod-vertical:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header,
+.anp-alternate-tab-toggle .mod-horizontal:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+  background: var(--tab-background) !important;
+  border-radius: var(--anp-safari-tab-radius, 6px) !important;
+  box-shadow: none !important;
+  height: var(--tab-height) !important;
+  padding: 0 !important;
+  transition: 400ms, background-color 150ms ease-in-out !important;
+}
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+  max-width: var(--tab-max-width) !important;
+  border: var(--anp-safari-border-width, 1px) solid var(--tab-outline-color) !important;
+}
+.anp-alternate-tab-toggle.anp-alt-tab-anim-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+  transition: 400ms, background-color 150ms ease-in-out !important;
+}
+.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked) .workspace-tab-header:first-child {
+  margin-left: 0 !important;
+}
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
+  padding: 7px 8px !important;
+}
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
+  padding: 0 4px 0 8px !important;
+  transition: 400ms, background-color 150ms ease-in-out, max-width 400ms !important;
+}
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner,
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-close-button,
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-icon {
+  color: var(--text-muted) !important;
+}
+.anp-alternate-tab-toggle .workspace .mod-root .workspace-tab-header-inner::after {
+  display: none !important;
+}
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
+  flex-grow: 1.67 !important;
+  max-width: var(--tab-max-width-active) !important;
+  background-color: var(--background-primary) !important;
+}
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: var(--color-accent) !important;
+}
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-close-button,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+  color: var(--text-faint) !important;
+}
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
+  background-color: rgba(var(--rp-highlightLow), 0.4) !important;
+}
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-close-button,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+  color: var(--color-accent) !important;
+}
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:hover {
+  background-color: var(--background-modifier-border) !important;
+}
+.anp-alternate-tab-toggle .sidebar-toggle-button.mod-left,
+.anp-alternate-tab-toggle .sidebar-toggle-button.mod-right {
+  align-items: center !important;
+}
+.anp-alternate-tab-toggle .sidebar-toggle-button.mod-left .clickable-icon,
+.anp-alternate-tab-toggle .sidebar-toggle-button.mod-right .clickable-icon {
+  height: var(--tab-height) !important;
+}
+.is-focused:not(.anp-mini-tab-toggle.anp-colorful-frame) .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: var(--color-accent) !important;
+}
+.anp-alternate-tab-toggle.anp-safari-tab-animated .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active {
+  flex-grow: 1.67 !important;
+  max-width: var(--tab-max-width-active) !important;
+  transition: max-width 400ms ease-in-out, width 400ms ease-in-out, flex-grow 400ms ease, background-color 150ms !important;
+}
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header {
+  --tab-text-color-focused-active-current: rgb(var(--anp-depth-tab-text, var(--rp-text)));
+  --tab-text-color-focused: rgb(var(--anp-depth-tab-text, var(--rp-text)));
+}
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active) {
+  --tab-text-color: var(--anp-depth-tab-text) !important;
+  --icon-color: var(--anp-depth-tab-text) !important;
+  --icon-color-hover: var(--anp-depth-tab-text) !important;
+  background-color: color-mix(in srgb, var(--rp-base) calc(var(--anp-depth-tab-opacity, 0.6) * 100%), transparent) !important;
+}
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active)::before,
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active)::after {
+  box-shadow: inset 0 0 0 var(--tab-outline-width) transparent, 0 0 0 calc(var(--tab-curve) * 4) color-mix(in srgb, var(--rp-base) calc(var(--anp-depth-tab-opacity, 0.6) * 100%), transparent) !important;
+}
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active)::after {
+  clip-path: inset(50% 50% 0 calc(var(--tab-curve) * 0)) !important;
+}
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active)::before {
+  clip-path: inset(50% calc(var(--tab-curve) * 0) 0 50%) !important;
+}
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header-inner::after {
+  display: none !important;
+}
+.anp-depth-tab-toggle .workspace-tab-header-container-inner {
+  gap: var(--anp-depth-tab-gap, 10px) !important;
+}
+.anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+  background-color: transparent !important;
+}
+.anp-depth-tab-toggle .workspace-tab-header-inner-close-button:hover {
+  background-color: var(--background-modifier-hover) !important;
+}
+.anp-depth-tab-toggle.anp-depth-tab-text-invert {
+  --anp-depth-tab-text: var(--rp-base) !important;
+}
+/* =========================================================================
+   workspace-translucency.css
+   Translucent window styling overrides from AnuPpuccin
+   ========================================================================= */
+body.is-translucent {
+  background-color: transparent !important;
+  --workspace-background-translucent: color-mix(in srgb, var(--rp-base) calc(var(--anp-translucency-opacity, 0.15) * 100%), transparent) !important;
+}
+.is-translucent:not(.is-fullscreen) {
+  --nav-collapse-icon-color: rgba(128, 128, 128, 0.3) !important;
+  --nav-collapse-icon-color-collapsed: rgba(128, 128, 128, 0.3) !important;
+  --divider-color: rgba(var(--rp-highlightMed), 0.15) !important;
+}
+.is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left,
+.is-translucent:not(.is-fullscreen) .workspace-tabs,
+.is-translucent:not(.is-fullscreen) .mod-left-split .workspace-tab-header-container,
+.is-translucent:not(.is-fullscreen) .mod-right-split .workspace-tab-header-container,
+.is-translucent:not(.is-fullscreen) .mod-top .workspace-tab-header-container,
+.is-translucent:not(.is-fullscreen) .workspace-tabs .workspace-leaf,
+.is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left:before,
+.is-translucent:not(.is-fullscreen) .workspace-split.mod-root,
+.is-translucent:not(.is-fullscreen) .workspace-split.mod-root.mod-left-split .view-content,
+.is-translucent:not(.is-fullscreen) .view-header,
+.is-translucent:not(.is-fullscreen) .horizontal-main-container {
+  background-color: transparent !important;
+}
+.is-translucent:not(.is-fullscreen) .view-header-title-container:not(.mod-at-end):after {
+  background-image: none !important;
+}
+.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .workspace-tab-header,
+.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .view-header {
+  background-color: var(--background-primary) !important;
+}
+.is-translucent .workspace {
+  background-color: transparent !important;
+}
+.is-translucent .workspace-split.mod-left-split.is-sidedock-collapsed .workspace-tabs,
+.is-translucent .workspace-split.mod-right-split.is-sidedock-collapsed .workspace-tabs {
+  visibility: hidden !important;
 }

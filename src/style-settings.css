@@ -835,6 +835,141 @@ settings:
     type: variable-number
     default: 32
     format: px
+
+  -
+    id: rp-workspace-heading
+    title: Workspace
+    description: Adjust Obsidian's sidebar, status bar, tabs, canvas, and PDF viewer settings
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: rp-canvas-subheading
+    title: Canvas
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: rp-canvas-dark-bg
+    title: Darker Canvas Background
+    description: Darkens the background of the Canvas whiteboard view
+    type: class-toggle
+    default: false
+  -
+    id: rp-translucency-subheading
+    title: Translucency
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-translucency-opacity
+    title: Window Opacity (Translucency)
+    description: Adjust the opacity of the translucent window background (requires "Translucent window" system setting enabled).
+    type: variable-number
+    default: 0.15
+  -
+    id: rp-statusbar-subheading
+    title: Status Bar
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-status-bar-select
+    title: Status Bar Style
+    type: class-select
+    default: none
+    options:
+    -
+      label: Default
+      value: none
+    -
+      label: Floating
+      value: anp-floating-status-bar
+    -
+      label: Fixed
+      value: anp-fixed-status-bar
+  -
+    id: rp-tabs-subheading
+    title: Tabs & Stacked Tabs
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-alt-tab-style
+    title: Tab Style
+    type: class-select
+    allowEmpty: false
+    default: anp-default-tab
+    options:
+    -
+      label: Default
+      value: anp-default-tab
+    -
+      label: Depth
+      value: anp-depth-tab-toggle
+    -
+      label: Minimalistic
+      value: anp-mini-tab-toggle
+    -
+      label: Safari-style (Animated)
+      value: anp-alternate-tab-toggle
+    -
+      label: Safari-style (Vanilla)
+      value: anp-safari-tab-toggle
+  -
+    id: anp-alt-tab-custom-height
+    title: Custom Tab Height
+    description: Adjust height of the tabs bar.
+    type: variable-number
+    default: 40
+    format: px
+  -
+    id: anp-stacked-header-width
+    title: Stacked Tabs Header Width
+    description: Adjust width of stacked tab headers.
+    type: variable-number
+    default: 40
+    format: px
+  -
+    id: anp-safari-tab-radius
+    title: Safari Tab Radius
+    description: Corner radius of Safari-style tabs.
+    type: variable-number
+    default: 6
+    format: px
+  -
+    id: anp-safari-border-width
+    title: Safari Tab Border Width
+    description: Border width of Safari-style tabs.
+    type: variable-number
+    default: 1
+    format: px
+  -
+    id: anp-safari-tab-gap
+    title: Safari Tab Gap
+    description: Spacing between Safari-style tabs.
+    type: variable-number
+    default: 10
+    format: px
+  -
+    id: anp-depth-tab-gap
+    title: Depth Tab Gap
+    description: Spacing between Depth-style tabs.
+    type: variable-number
+    default: 10
+    format: px
+  -
+    id: anp-depth-tab-opacity
+    title: Depth Tab Inactive Opacity
+    description: Opacity of inactive tabs in Depth style (0.0 to 1.0).
+    type: variable-number
+    default: 0.6
+  -
+    id: anp-disable-newtab-align
+    title: Disable New Tab Button Right Alignment
+    description: Keeps the new tab button immediately next to the last tab.
+    type: class-toggle
+    default: false
 */
 
 .rp-accent-rose,
