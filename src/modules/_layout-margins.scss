@@ -1,35 +1,36 @@
-/* =========================================================================
-   layout-margins.css
-   Style overrides for line widths and custom margins
-   ========================================================================= */
+// =========================================================================
+// _layout-margins.scss
+// Style overrides for line widths and custom margins
+// =========================================================================
 
-/* Readable Line Width Overrides */
-.markdown-source-view.is-readable-line-width .CodeMirror {
-  max-width: var(--file-line-width, 900px) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+// --- Readable Line Width Overrides ---
+.is-readable-line-width {
+  &.markdown-source-view .CodeMirror,
+  &.markdown-preview-view .markdown-preview-section {
+    max-width: var(--file-line-width, 900px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 
-.markdown-preview-view.is-readable-line-width .markdown-preview-section {
-  max-width: var(--file-line-width, 900px) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Custom note side margins */
+// --- Custom note side margins ---
 .rp-toggle-preview {
   --file-margins: var(--custom-file-margins, 32px) !important;
+
+  .markdown-preview-view,
+  .mod-single-child .markdown-preview-view {
+    padding-left: var(--file-margins) !important;
+    padding-right: var(--file-margins) !important;
+  }
 }
 
-.rp-toggle-preview .markdown-preview-view,
-.rp-toggle-preview .mod-single-child .markdown-preview-view {
-  padding-left: var(--file-margins) !important;
-  padding-right: var(--file-margins) !important;
-}
-
-/* Style Settings UI Suffix helper */
-.style-settings-container .setting-item:is([data-id=custom-file-margins], [data-id=file-line-width]) .setting-item-control::after {
-  content: "px";
-  margin-left: 4px;
-  color: var(--text-muted);
+// --- Style Settings UI Suffix helper ---
+.style-settings-container {
+  .setting-item:is([data-id="custom-file-margins"], [data-id="file-line-width"]) {
+    .setting-item-control::after {
+      content: "px";
+      margin-left: 4px;
+      color: var(--text-muted);
+    }
+  }
 }

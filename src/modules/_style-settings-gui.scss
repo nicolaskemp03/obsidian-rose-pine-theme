@@ -1,64 +1,79 @@
-/* =========================================================================
-   style-settings-gui.css
-   Style overrides for the Style Settings plugin settings dashboard UI
-   ========================================================================= */
+// =========================================================================
+// _style-settings-gui.scss
+// Style overrides for the Style Settings plugin settings dashboard UI
+// =========================================================================
 
-.style-settings-container:empty {
-  display: none !important;
+.style-settings-container {
+  &:empty {
+    display: none !important;
+  }
+
+  // --- Suffix helpers for Layout custom measurements ---
+  .setting-item:is([data-id="anp-card-radius"], [data-id="anp-card-layout-padding"], [data-id="anp-card-header-left-padding"], [data-id="anp-border-radius"], [data-id="anp-border-padding"]) {
+    .setting-item-control::after {
+      content: "px" !important;
+      margin-left: 4px !important;
+      color: var(--text-muted) !important;
+    }
+  }
+
+  // Remove top border when headings immediately follow items
+  .setting-item + .setting-item-heading {
+    border-top-width: 0 !important;
+  }
 }
 
-.style-settings-heading[data-level] {
-  padding-top: var(--size-4-2) !important;
-  padding-bottom: var(--size-4-2) !important;
-}
+.style-settings-heading {
+  &[data-level] {
+    padding-top: var(--size-4-2) !important;
+    padding-bottom: var(--size-4-2) !important;
+  }
 
-.style-settings-heading[data-level="0"]:not(.is-collapsed) {
-  margin-bottom: var(--size-4-2) !important;
-}
+  &[data-level="0"] {
+    &:not(.is-collapsed) {
+      margin-bottom: var(--size-4-2) !important;
 
-.style-settings-heading:not([data-level="0"]) {
-  border-top: 1px solid var(--background-modifier-border) !important;
-  border-bottom: none !important;
-}
+      & + .style-settings-container {
+        border-bottom: 1px solid var(--background-modifier-border) !important;
+      }
+    }
+  }
 
-.style-settings-heading:not([data-level="0"], .is-collapsed) {
-  margin-bottom: 0 !important;
-}
+  &[data-level="1"] {
+    border-top-color: var(--background-modifier-border) !important;
+  }
 
-/* Level 1 & 2 Subheading containers get indented boxes with background shading */
-.style-settings-heading:not([data-level="0"]) + .style-settings-container {
-  border: 1px solid var(--background-modifier-border) !important;
-  border-radius: 6px !important;
-  padding: var(--size-4-2) !important;
-  padding-left: var(--size-4-6) !important;
-  background-color: var(--background-secondary-alt) !important;
-  overflow-x: hidden !important;
-  margin-top: 4px !important;
-  margin-bottom: 12px !important;
-}
+  &:not([data-level="0"]) {
+    border-top: 1px solid var(--background-modifier-border) !important;
+    border-bottom: none !important;
 
-.style-settings-heading[data-level="0"]:not(.is-collapsed) + .style-settings-container {
-  border-bottom: 1px solid var(--background-modifier-border) !important;
-}
+    &:not(.is-collapsed) {
+      margin-bottom: 0 !important;
 
-.style-settings-heading[data-level="1"] {
-  border-top-color: var(--background-modifier-border) !important;
-}
+      & + .style-settings-container + .style-settings-heading {
+        border-top-width: 0 !important;
+      }
+    }
 
-.style-settings-heading:not([data-level="0"]):nth-child(-n+2),
-.style-settings-heading:not([data-level="0"], .is-collapsed) + .style-settings-container + .style-settings-heading,
-.style-settings-container .setting-item + .setting-item-heading {
-  border-top-width: 0 !important;
-}
+    &:nth-child(-n+2) {
+      border-top-width: 0 !important;
+    }
 
-/* Distinct color for our custom category header name */
-.style-settings-heading[data-id="rose-pine-settings"] .setting-item-name {
-  color: var(--text-accent) !important;
-}
+    // Level 1 & 2 Subheading containers get indented boxes with background shading
+    & + .style-settings-container {
+      border: 1px solid var(--background-modifier-border) !important;
+      border-radius: 6px !important;
+      padding: var(--size-4-2) !important;
+      padding-left: var(--size-4-6) !important;
+      background-color: var(--background-secondary-alt) !important;
+      overflow-x: hidden !important;
+      margin-top: 4px !important;
+      margin-bottom: 12px !important;
+    }
+  }
 
-/* Suffix helpers for Layout custom measurements */
-.style-settings-container .setting-item:is([data-id=anp-card-radius], [data-id=anp-card-layout-padding], [data-id=anp-card-header-left-padding], [data-id=anp-border-radius], [data-id=anp-border-padding]) .setting-item-control::after {
-  content: "px" !important;
-  margin-left: 4px !important;
-  color: var(--text-muted) !important;
+  // Distinct color for our custom category header name
+  &[data-id="rose-pine-settings"] .setting-item-name {
+    color: var(--text-accent) !important;
+  }
 }

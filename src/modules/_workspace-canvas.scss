@@ -1,42 +1,46 @@
-/* =========================================================================
-   workspace.css (Module: Canvas)
-   Canvas styling overrides from AnuPpuccin
-   ========================================================================= */
+// =========================================================================
+// _workspace-canvas.scss
+// Canvas styling overrides from AnuPpuccin
+// =========================================================================
 
 .canvas-card-menu {
   box-shadow: none !important;
   border: 1px solid var(--background-modifier-border) !important;
   background-color: var(--background-secondary) !important;
-}
 
-.canvas-card-menu .canvas-card-menu-button svg {
-  fill: var(--background-secondary) !important;
-}
+  .canvas-card-menu-button {
+    svg {
+      fill: var(--background-secondary) !important;
+    }
 
-.canvas-card-menu .canvas-card-menu-button:hover {
-  color: var(--text-normal) !important;
+    &:hover {
+      color: var(--text-normal) !important;
+    }
+  }
 }
 
 .canvas-controls button {
   background-color: var(--background-secondary) !important;
+
+  &:hover {
+    filter: brightness(95%) !important;
+  }
 }
 
-.canvas-controls button:hover {
-  filter: brightness(95%) !important;
-}
+// --- Darker Canvas Background Toggle ---
+.rp-canvas-dark-bg {
+  .canvas-wrapper {
+    background-color: var(--background-secondary) !important;
+  }
 
-/* Darker Canvas Background Toggle */
-.rp-canvas-dark-bg .canvas-wrapper {
-  background-color: var(--background-secondary) !important;
-}
+  .canvas-controls button,
+  .canvas-card-menu {
+    background-color: var(--background-primary) !important;
+  }
 
-.rp-canvas-dark-bg .canvas-controls button,
-.rp-canvas-dark-bg .canvas-card-menu {
-  background-color: var(--background-primary) !important;
-}
-
-.rp-canvas-dark-bg .canvas-card-menu .canvas-card-menu-button svg {
-  fill: var(--background-primary) !important;
+  .canvas-card-menu .canvas-card-menu-button svg {
+    fill: var(--background-primary) !important;
+  }
 }
 
 .canvas-selection {
@@ -44,19 +48,21 @@
   border: 2px solid var(--color-accent) !important;
 }
 
-.canvas-node.is-themed .canvas-node-label {
-  color: rgb(var(--canvas-color)) !important;
+.canvas-node {
+  &.is-themed .canvas-node-label {
+    color: rgb(var(--canvas-color)) !important;
+  }
 }
 
 .canvas-node-placeholder {
   color: rgb(var(--canvas-color)) !important;
-}
 
-.canvas-node-placeholder::after {
-  top: 0 !important;
-  bottom: 0 !important;
-  right: 0 !important;
-  left: 0 !important;
+  &::after {
+    top: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+  }
 }
 
 .canvas-placeholder-message {

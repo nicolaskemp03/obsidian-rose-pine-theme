@@ -1,49 +1,51 @@
-/* =========================================================================
-   workspace-statusbar.css
-   Status bar styling overrides from AnuPpuccin
-   ========================================================================= */
+// =========================================================================
+// _workspace-statusbar.scss
+// Status bar styling overrides from AnuPpuccin
+// =========================================================================
 
-/* Floating Status Bar */
+// --- Floating Status Bar ---
 .anp-floating-status-bar {
   --status-bar-position: absolute;
   --status-bar-radius: 6px;
   --status-bar-border-width: 1px;
+
+  .status-bar {
+    position: absolute !important;
+    transform: translateX(calc(100% - 25px)) !important;
+    transition: transform 300ms 150ms !important;
+    bottom: 8px !important;
+    right: 8px !important;
+    z-index: 999 !important;
+    border-radius: 6px !important;
+    border: 1px solid var(--border-color) !important;
+    background-color: var(--background-secondary) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    height: auto !important;
+    padding: 4px 8px !important;
+
+    &::before {
+      width: 100%;
+      min-height: 100%;
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateX(-100%);
+    }
+
+    &:hover {
+      transform: none !important;
+      transition: transform 300ms 150ms !important;
+    }
+  }
 }
 
-.anp-floating-status-bar .status-bar {
-  position: absolute !important;
-  transform: translateX(calc(100% - 25px)) !important;
-  transition: transform 300ms 150ms !important;
-  bottom: 8px !important;
-  right: 8px !important;
-  z-index: 999 !important;
-  border-radius: 6px !important;
-  border: 1px solid var(--border-color) !important;
-  background-color: var(--background-secondary) !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-  height: auto !important;
-  padding: 4px 8px !important;
-}
-
-.anp-floating-status-bar .status-bar::before {
-  width: 100%;
-  min-height: 100%;
-  content: " ";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translateX(-100%);
-}
-
-.anp-floating-status-bar .status-bar:hover {
-  transform: none !important;
-  transition: transform 300ms 150ms !important;
-}
-
-/* Fixed Status Bar */
-.anp-fixed-status-bar .status-bar {
-  position: relative !important;
-  --status-bar-position: relative;
-  --status-bar-radius: 0;
-  border-top: 1px solid var(--border-color) !important;
+// --- Fixed Status Bar ---
+.anp-fixed-status-bar {
+  .status-bar {
+    position: relative !important;
+    --status-bar-position: relative;
+    --status-bar-radius: 0;
+    border-top: 1px solid var(--border-color) !important;
+  }
 }
