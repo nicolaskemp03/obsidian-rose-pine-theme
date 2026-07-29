@@ -1,0 +1,229 @@
+// =========================================================================
+// _workspace-rainbow-folders.scss
+// Rainbow Folders ported and adapted to Rosé Pine colors
+// =========================================================================
+
+/*---------------------------------------------------------------
+* RAINBOW COLORS (Adapted to Rosé Pine)
+*---------------------------------------------------------------*/
+.anp-full-rainbow-color-toggle,
+.anp-simple-rainbow-color-toggle {
+    .nav-folder-children > .nav-folder,
+    .nav-files-container > div > .nav-folder,
+    [data-type="bookmarks"] .tree-item {
+        &:nth-child(6n + 1) {
+            --rainbow-folder-color: var(--rp-love);
+        }
+        &:nth-child(6n + 2) {
+            --rainbow-folder-color: var(--rp-rose);
+        }
+        &:nth-child(6n + 3) {
+            --rainbow-folder-color: var(--rp-gold);
+        }
+        &:nth-child(6n + 4) {
+            --rainbow-folder-color: var(--rp-pine);
+        }
+        &:nth-child(6n + 5) {
+            --rainbow-folder-color: var(--rp-foam);
+        }
+        &:nth-child(6n + 6) {
+            --rainbow-folder-color: var(--rp-iris);
+        }
+    }
+}
+
+.anp-rainbow-subfolder-color-toggle {
+    .nav-files-container .nav-folder.nav-folder .nav-folder,
+    [data-type="bookmarks"] .tree-item .tree-item {
+        --rainbow-folder-color: inherit;
+    }
+}
+
+
+/*---------------------------------------------------------------
+* FULL RAINBOW STYLE
+*---------------------------------------------------------------*/
+.anp-full-rainbow-color-toggle {
+    // Apply styling to folders
+    .nav-files-container > div > .nav-folder .nav-folder-title,
+    .nav-files-container > div > .nav-folder .nav-file-title,
+    .nav-files-container .collapse-icon svg.svg-icon,
+    .tree-item-self .tree-item-icon {
+        color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
+        --icon-color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
+    }
+
+    // Apply styling to files in root level
+    &.anp-rainbow-file-toggle {
+        .nav-files-container > div > .nav-folder-children > .nav-file .nav-file-title {
+            color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
+        }
+
+        &.theme-dark .nav-files-container > .nav-folder-children > .nav-file {
+            background-color: color-mix(in srgb, var(--rp-text) calc(var(--anp-rainbow-folder-bg-opacity, 0.7) * 100%), transparent);
+        }
+
+        &.theme-light .nav-files-container > div > .nav-file {
+            background-color: color-mix(in srgb, var(--rp-overlay) calc(var(--anp-rainbow-folder-bg-opacity, 0.7) * 100%), transparent);
+        }
+
+        .nav-files-container > div > .nav-file {
+            border-radius: 5px;
+            margin-bottom: 2px;
+        }
+    }
+
+    // Apply styling to files in folders
+    &:not(.is-grabbing) .nav-files-container > div {
+        // Files have a slight background
+        & > .nav-folder .nav-folder-title:hover,
+        .nav-file .nav-file-title:hover {
+            background-color: color-mix(in srgb, var(--rp-base) 10%, transparent);
+        }
+
+        // Background is intensified upon grabbing or selection
+        & > .nav-folder .nav-file-title.is-active {
+            border-color: color-mix(in srgb, var(--rp-base) 20%, transparent);
+            background-color: color-mix(in srgb, var(--rp-base) 20%, transparent);
+        }
+    }
+
+    //Hide scrollbars and allow horizontal scrolling
+    .nav-file {
+        overflow-y: hidden;
+    }
+
+    //Renaming files
+    .nav-file-title-content.is-being-renamed,
+    .nav-folder-title-content.is-being-renamed {
+        cursor: text;
+        border-color: var(--interactive-accent);
+        background-color: color-mix(in srgb, var(--rp-base) 20%, transparent);
+
+        &::selection {
+            background-color: color-mix(in srgb, var(--color-accent) 20%, transparent);
+        }
+    }
+
+    .nav-file-title-content.is-being-renamed::selection {
+        background-color: color-mix(in srgb, var(--color-accent) 20%, transparent);
+    }
+
+    .nav-files-container {
+        .nav-folder > .nav-folder-children {
+            padding: 0 5px 0 5px;
+        }
+
+        > div {
+            > .nav-folder {
+                transition: background-color 0.4s;
+                background-color: color-mix(in srgb, var(--rainbow-folder-color) calc(var(--anp-rainbow-folder-bg-opacity, 0.7) * 100%), transparent);
+                margin-bottom: 2px;
+                border-radius: 5px;
+
+                .nav-folder-children {
+                    border-color: color-mix(in srgb, var(--rp-base) 40%, transparent);
+                }
+            }
+
+            > .nav-file.has-focus {
+                background-color: color-mix(in srgb, var(--rp-text) calc(var(--anp-rainbow-folder-bg-opacity, 0.7) * 100%), transparent);
+                border-left: none;
+                border-color: var(--color-accent);
+            }
+
+            & > .nav-file,
+            & > .nav-file.has-focus {
+                & > .nav-file-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    // Disable shadows
+    .workspace-leaf.mod-active .nav-folder.has-focus > {
+        .nav-file-title,
+        .nav-folder-title {
+            &,
+            &:focus-within {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+// Invert item text colors
+.anp-full-rainbow-text-color-toggle-dark.theme-dark,
+.anp-full-rainbow-text-color-toggle-light.theme-light {
+    --anp-full-rainbow-text-inverted: var(--rp-text);
+}
+
+
+/*---------------------------------------------------------------
+* SIMPLE RAINBOW STYLE
+*---------------------------------------------------------------*/
+.anp-simple-rainbow-color-toggle {
+
+    // Apply styling to titles
+    &.anp-simple-rainbow-title-toggle {
+        .nav-files-container > div > .nav-folder .nav-folder-title,
+        [data-type="bookmarks"] .tree-item .tree-item-inner {
+            transition: color 0.4s;
+            color: color-mix(in srgb, var(--rainbow-folder-color) calc(var(--anp-simple-rainbow-opacity, 1) * 100%), transparent);
+            --nav-item-background-hover: color-mix(in srgb, var(--rainbow-folder-color) 10%, transparent);
+            --nav-item-background-active: color-mix(in srgb, var(--rainbow-folder-color) 10%, transparent);
+        }
+
+        .nav-folder.is-being-dragged-over {
+            background-color: color-mix(in srgb, var(--rainbow-folder-color) 10%, transparent);
+        }
+    }
+
+    // Circle icon indicator
+    &.anp-simple-rainbow-icon-toggle {
+
+        .nav-files-container > div > .nav-folder .nav-folder-title:after,
+        [data-type="bookmarks"] .tree-item .tree-item-inner:after {
+            transition: color 0.4s;
+            color: color-mix(in srgb, var(--rainbow-folder-color) calc(var(--anp-simple-rainbow-opacity, 1) * 100%), transparent);
+            content: "⬤";
+            font-size: 10px;
+            position: relative;
+            margin-left: 4px;
+            opacity: 0.5;
+            top: -0.5px;
+        }
+
+        [data-type="bookmarks"] .tree-item .tree-item-inner {
+            align-items: center;
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+    }
+
+    // Color indents
+    &.anp-simple-rainbow-indentation-toggle {
+
+        .nav-files-container .nav-folder > .nav-folder-children,
+        [data-type="bookmarks"] .tree-item .tree-item-children {
+            transition: color 0.4s;
+            border-color: color-mix(in srgb, var(--rainbow-folder-color) 50%, transparent);
+        }
+    }
+
+    // Color Collapse Indicators
+    &.anp-simple-rainbow-collapse-icon-toggle {
+        .tree-item-self .tree-item-icon {
+            --icon-color: color-mix(in srgb, var(--rainbow-folder-color) calc(var(--anp-simple-rainbow-opacity, 1) * 100%), transparent);
+            --nav-collapse-icon-color: color-mix(in srgb, var(--rainbow-folder-color) calc(var(--anp-simple-rainbow-opacity, 1) * 100%), transparent);
+            --nav-collapse-icon-color-collapsed: color-mix(in srgb, var(--rainbow-folder-color) calc(var(--anp-simple-rainbow-opacity, 1) * 100%), transparent);
+        }
+    }
+}
+
+/* Fix folder icon integration if simple rainbow icon toggle is on */
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .obsidian-icon-folder-icon {
+    color: var(--rainbow-folder-color);
+}

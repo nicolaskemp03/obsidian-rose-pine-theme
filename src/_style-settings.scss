@@ -1094,6 +1094,123 @@ settings:
     type: variable-number
     default: 20
     format: px
+
+  # File Browser
+  -
+    id: anp-filebrowser-header
+    title: File Browser
+    description: Enable/Disable File Browser elements
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-custom-vault-toggle
+    title: Enable custom vault title
+    type: class-toggle
+  -
+    id: anp-file-icons
+    title: Enable file icons
+    type: class-toggle
+  -
+    id: anp-floating-header
+    title: Enable floating vault title
+    type: class-toggle
+  -
+    id: anp-collapse-folders
+    title: Enable folder icons for collapse indicators
+    type: class-toggle
+
+  # PDF Viewer
+  -
+    id: anp-pdf-viewer-header
+    title: PDF Viewer
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-pdf-blend-toggle-dark
+    title: Toggle PDF background blending - Dark Mode
+    description: Blends PDF viewer background with obsidian background in dark mode
+    type: class-toggle
+  -
+    id: anp-pdf-blend-toggle-light
+    title: Toggle PDF background blending - Light Mode
+    description: Blends PDF viewer background with obsidian background in light mode
+    type: class-toggle
+
+  # Rainbow Folders
+  -
+    id: anp-rainbow-section-header
+    title: Rainbow Folders
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-alt-rainbow-style
+    title: Rainbow style
+    type: class-select
+    allowEmpty: false
+    default: anp-default-rainbow
+    options:
+    -
+        label: None
+        value: anp-default-rainbow
+    -
+        label: Full
+        value: anp-full-rainbow-color-toggle
+    -
+        label: Simple
+        value: anp-simple-rainbow-color-toggle
+  -
+    id: anp-full-rainbow-folder-settings
+    title: Full Folder Settings
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-rainbow-file-toggle
+    title: File recolor toggle
+    description: Recolors files to match the folders
+    type: class-toggle
+  -
+    id: anp-full-rainbow-text-color-toggle-light
+    title: Invert title colors (Light Mode)
+    type: class-toggle
+  -
+    id: anp-full-rainbow-text-color-toggle-dark
+    title: Invert title colors (Dark Mode)
+    type: class-toggle
+  -
+    id: anp-rainbow-folder-bg-opacity
+    title: Folder background color opacity
+    type: variable-number
+    default: 0.7
+  -
+    id: anp-simple-rainbow-folder-settings
+    title: Simple Folder Settings
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-simple-rainbow-title-toggle
+    title: Enable title recolor
+    type: class-toggle
+  -
+    id: anp-simple-rainbow-collapse-icon-toggle
+    title: Enable collapse icon recolor
+    type: class-toggle
+  -
+    id: anp-simple-rainbow-indentation-toggle
+    title: Enable collapse indent recolor
+    type: class-toggle
+  -
+    id: anp-simple-rainbow-icon-toggle
+    title: Enable circular file
+    type: class-toggle
+  -
+    id: anp-rainbow-subfolder-color-toggle
+    title: Enable subfolder color inheritance
+    type: class-toggle
 */
 
 .rp-accent-rose,
